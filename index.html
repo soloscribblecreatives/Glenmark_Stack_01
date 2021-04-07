@@ -5,83 +5,99 @@
 <meta http-equiv="cache-control" content="max-age=200"/>
 <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
 <meta http-equiv="X-UA-Compatible" content="chrome=1">
-<title>Pharma Content</title>
+<title>Metabolics</title>
+<link rel="stylesheet" type="text/css" href="animate.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="global.css" media="screen"/>
 
-<style>
-
-* {
-	margin: 0;
-	padding: 0;
-}
-
-body {
-	background-color: #FFFCB8;
-	z-index: 1;
-}
-
-h1 {
-	position: relative;
-	text-align: center;
-	font-family: Neuropol X;
-}
-
-hr {
-	height: 5px;
-	background-color: black;
-	border: none;
-}
-
-.title {
-	position: relative;
-	padding: 20px;
-	margin: 50px 125px 50px 125px;
-	background-color: #F8E19E;
-	color: #2d2d2d;
-	border: 2px solid #2d2d2d;
-	border-radius: 50px;
-	text-align: center;
-	font-family: lato;
-}
-
-.base {
-	position: relative;
-	margin: 50px 75px 50px 75px;
-	text-align: center;
-}
-
-.content {
-	position: relative;
-	width: 110px;
-	height: 15px;
-	padding: 10px;
-	margin: 10px;
-	background-color: #2d2d2d;
-	color: #fff;
-	font-family: lato;
-	line-height: 0.9em;
-	text-decoration: none;
-	text-underline: none;
-	border: 2px solid #fff;
-	border-radius: 50px;	
-	text-align: center;	
-	display: inline-block;
-	z-index: 2;
-}
-
-</style>
+<script src="jquery.min.js" type="text/javascript" language="javascript"></script>
+<script src="jquery.mobile.custom.min.js" type="text/javascript" language="javascript"></script>
+<script src="jquery.touchSwipe.min.js" type="text/javascript" language="javascript"></script>
 </head>
 
 <body>
-<h1 class="title">Zoltan Care - Chota Badlaav</h1>
-<div class="base">
-<a href="Razel 5-10-20/html/index.html" class="content" target="_blank">Razel 5-10-20</a>
-<a href="Razel 40-HC/html/index.html" class="content" target="_blank">Razel 40-HC</a>
-<a href="Razel 40-PCI/html/index.html" class="content" target="_blank">Razel 40-PCI</a>
-<a href="Razel A/html/index.html" class="content" target="_blank">Razel A</a>
-<a href="Razel CV/html/index.html" class="content" target="_blank">Razel CV</a>
-<a href="Razel EZ/html/index.html" class="content" target="_blank">Razel EZ</a>
-<a href="Razel F/html/index.html" class="content" target="_blank">Razel F</a>
-<a href="Razel Gold/html/index.html" class="content" target="_blank">Razel Gold</a>
+<div id="wrapper" rel="1">
+  <div class="menu"> <img src="menu.png" width="37" alt=""> </div>
+  <div class="slide_arrow">
+    <div class="left_arrow" ><img src="left_arrow.png" alt="previous icon" width="23" height="23" ></div>
+    <div class="right_arrow" ><img src="right_arrow.png" alt="next icon" width="23" height="23"></div>
+  </div>
+  <div id="main_content"></div>
+  <div class="reference active">
+    <div class="box">
+      <div class="slide_jumper">
+		  <div class="slides"><img src="thumbs/01.png" alt=""></div>
+          <div class="slides"><img src="thumbs/02.png" alt=""></div>
+          <div class="slides"><img src="thumbs/03.png" alt=""></div>
+          <div class="slides"><img src="thumbs/04.png" alt=""></div>
+          <div class="slides"><img src="thumbs/05.png" alt=""></div>       
+          <div class="slides"><img src="thumbs/06.png" alt=""></div>               
+      </div>
+    </div>
+    <div class="box_btn"></div>
+  </div>
 </div>
+<div id="myconsole"></div>
+<div id="click_through" > </div>
+<script src="global.js" type="text/javascript" language="javascript"></script> 
+<script>
+var startTime = Date.now();
+//step 1:
+var temp = localStorage.getItem(currentContentId+"_"+contentName+"_slideNo_1");
+	
+	if(temp == null){			
+			localStorage.setItem(currentContentId+"_"+contentName+"_slideNo_1" ,startTime);
+			localStorage.setItem(currentContentId+"_"+contentName+"_totalTime_slideNo_1",0);
+			//to capture start time of 1st slide in db format
+			var startTime1InDBFormat = currentTimeInDatabaseFormat();
+			//alert(startTime1InDBFormat);
+			localStorage.setItem(currentContentId+"_"+contentName+"_StartTime_1" ,startTime1InDBFormat);	
+	}
+//step 1 ends here..
+
+$(document).ready(function(){
+  // jQuery(".next").bind(event, function(){
+  //     document.location = 'VoltarenVAsb/VoltarenVAsb.html';
+  //     });
+var selectedContentPath = 'slide1/';
+//  document.getElementById("main_content").innerHTML='<object type="text/html" width="1024px" height="768px" data="'+selectedContentPath+"Dlight1.htm"+'"></object>';
+
+//custom slide additional code begins here....
+
+if (typeof(localStorage.getItem("currentcustomslideflag"))!='undefined' && localStorage.getItem("currentcustomslideflag") =='true'){
+	var custcomslideid = parseInt(localStorage.getItem("currentcontentcustomslideId")) ;
+	
+	switch(custcomslideid){
+	case 1:
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide1/1.jpg" width="1024" height="768" alt=""></div>';
+	break;
+	case 2:
+	content='<link rel="stylesheet" type="text/css" href="slide2/slide2.css" media="screen"/><div class="background"><img src="slide2/1.jpg" width="1024" height="768" alt=""></div>';
+	break;
+    case 3:
+	content='<link rel="stylesheet" type="text/css" href="slide3/slide3.css" media="screen"/><div class="background"><img src="slide3/1.jpg" width="1024" height="768" alt=""></div>';
+	break;
+    case 4:
+	content='<link rel="stylesheet" type="text/css" href="slide4/slide4.css" media="screen"/><div class="background"><img src="slide4/1.jpg" width="1024" height="768" alt=""></div>';
+	break;
+    case 5:
+	content='<link rel="stylesheet" type="text/css" href="slide5/slide5.css" media="screen"/><div class="background"><img src="slide5/1.jpg" width="1024" height="768" alt=""></div>';
+	break;
+	case 6:
+	content='<link rel="stylesheet" type="text/css" href="slide6/slide6.css" media="screen"/><div class="background"><img src="slide6/1.jpg" width="1024" height="768" alt=""></div>';
+	break;
+}
+
+	$("#main_content").html(content);
+	  localStorage.setItem("gotoNextPrevBrand" ,1);//if one than next if 2 than prev
+
+//custom slide additional code ends here....	 
+	 
+}else{
+
+$("#main_content").html('<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide1/1.jpg" width="1024" height="768" alt=""></div>');
+}
+});
+</script> 
+
 </body>
 </html>
