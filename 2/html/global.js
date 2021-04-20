@@ -198,7 +198,7 @@ if (typeof(localStorage.getItem('currentslide'))!='undefined' && localStorage.ge
 	
  } 
  
-	if(nextSlideNo <= 10){//number 3 is number of total slides present
+	if(nextSlideNo <= 2){//number 3 is number of total slides present
 	// alert(nextSlideNo);
 	var tempNext = localStorage.getItem(currentContentId+"_"+contentName+"_slideNo_"+nextSlideNo);
 
@@ -302,10 +302,10 @@ if(direction == 'b') {
 //custom slide changes ends here....
 
 	else{
-	if(page_id <= 10){
+	if(page_id <= 2){
 		page_id = page_id + 1;
 		//alert(page_id);
-		if(page_id == 11){
+		if(page_id == 3){
             flag=1;
         }
 	}
@@ -385,34 +385,10 @@ currentSlide();
 var selectedContentPath='';
 switch(pg_id){
 	case 1:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><iframe src="1/html/index.html" class="background1" height="768" width="1024" frameBorder="0" title="Iframe Example"></iframe>';
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="s1_1"><img src="slide1/s1_1.png" width="1024" height="768" alt=""/></div><div class="s1_2"><img src="slide1/s1_2.png"/></div>';
 	break;
 	case 2:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><iframe src="2/html/index.html" class="background1" height="768" width="1024" frameBorder="0" title="Iframe Example"></iframe>';
-	break;
-    case 3:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><iframe src="3/html/index.html" class="background1" height="768" width="1024" frameBorder="0" title="Iframe Example"></iframe>';
-	break;
-	case 4:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><iframe src="4/html/index.html" class="background1" height="768" width="1024" frameBorder="0" title="Iframe Example"></iframe>';
-	break;
-	case 5:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><iframe src="5/html/index.html" class="background1" height="768" width="1024" frameBorder="0" title="Iframe Example"></iframe>';
-	break;
-	case 6:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><iframe src="6/html/index.html" class="background1" height="768" width="1024" frameBorder="0" title="Iframe Example"></iframe>';
-	break;
-	case 7:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><iframe src="7/html/index.html" class="background1" height="768" width="1024" frameBorder="0" title="Iframe Example"></iframe>';
-	break;
-	case 8:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><iframe src="8/html/index.html" class="background1" height="768" width="1024" frameBorder="0" title="Iframe Example"></iframe>';
-	break;
-	case 9:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><iframe src="9/html/index.html" class="background1" height="768" width="1024" frameBorder="0" title="Iframe Example"></iframe>';
-	break;
-	case 10:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><iframe src="10/html/index.html" class="background1" height="768" width="1024" frameBorder="0" title="Iframe Example"></iframe>';
+	content='<link rel="stylesheet" type="text/css" href="slide2/slide2.css" media="screen"/><div class="s2_1"><img src="slide2/s2_1.png" width="1024" height="768" alt=""/></div><div class="s2_2"><img src="slide2/s2_2.png"/></div><div class="s2_3"><img src="slide2/s2_3.png"/></div><div class="s2_pop1" onclick="s2_pop1()"></div><div class="s2_c1ose1" onclick="s2_close1()"></div>';
 	break;
 }
 
@@ -437,7 +413,9 @@ function open_page(url,page_id){
 		toCaptureTime(slideid);
 		
 	}
+
 	
+
 	// toCaptureTime(page_id);
 	 localStorage.setItem("currentslide",page_id);
 	 currentContentNSlide = currentContentId+"_"+contentName+"_"+page_id;
@@ -476,22 +454,18 @@ function open_page(url,page_id){
 	  checkClickThrough();
 	}
 
-	function checkClickThrough(){
+function checkClickThrough(){
 	var currentslide=localStorage.getItem("currentslide");
 	//alert(currentslide);
 	document.getElementById("click_through").innerHTML='';
 
-	if(currentslide == 1){
-	document.getElementById("click_through").innerHTML='';
-		}
-    if(currentslide == 2){
-	document.getElementById("click_through").innerHTML='';
-		}
-
+	if(currentslide == 1) {
+		document.getElementById("click_through").innerHTML='';
 	}
+}
 
-	function checkBtns(refNum){
-		switch(refNum){
+	function checkBtns(refNum) {
+		switch(refNum) {
 			case 1:
 			open_page('',1);
             break;
@@ -554,3 +528,15 @@ $(document).ready(function(){
 		$('.touchbtn').css("display","block");
 	})
 })
+
+/*--------------------- animation javascript -----------------------*/
+
+function s2_pop1() {
+	$('.s2_5').css("display","block");
+	$('.s2_c1ose1').css("display","block");
+}
+
+function s2_close1() {
+	$('.s2_5').css("display","none");
+	$('.s2_c1ose1').css("display","none");
+}
