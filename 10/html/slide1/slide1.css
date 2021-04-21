@@ -3,54 +3,76 @@
 	padding: 0px;
 }
 
-.s2_1 {
+.s1_1 {
 	position: absolute;
 	width: 1024px;
 	height: 768px;
 	z-index: 1;
 }
 
-.s2_2 {
+.s1_2 {
 	position: absolute;
-  left: 50px;
-  top: 39px;
-  width: 736px;
-  height: 247px;
-	animation: fadeInDown 1s;
-	animation-delay: 0.5s;
+  left: 153px;
+  top: 82px;
+  width: 830px;
+  height: 441px;
+	animation: fadeInRight 1s;
+	animation-delay: 0.3s;
 	animation-fill-mode: both;
 	z-index: 2;
 }
 
-.s2_3 {
+.s1_3 {
 	position: absolute;
-  left: 81px;
-  top: 311px;
-  width: 848px;
-  height: 362px;
+	width: 459px;
+	height: 172px;
+	left: 282px;
+	top: 59px;
 	animation: fadeInRight 1s;
-	animation-delay: 1.5s;
+	animation-delay: 0.5s;
 	animation-fill-mode: both;
 	z-index: 3;
 }
 
-.s2_pop1 {
+.s1_4 {
+	position: absolute;
+	width: 387px;
+	height: 314px;
+	left: 583px;
+	top: 281px;
+	animation: fadeInRight 1s;
+	animation-delay: 0.5s;
+	animation-fill-mode: both;
+	z-index: 4;
+}
+
+.s1_5 {
+	position: absolute;
+	width: 974px;
+	height: 94px;
+	left: 27px;
+	top: 622px;
+	display: none;
+	z-index: 6;
+}
+
+.s1_pop1 {
 	position: absolute;
 	height: 80px;
 	width: 80px;
 	right: 32px;
 	bottom: 0px;
-	z-index: 3;
+	z-index: 10;
 }
 
-.s2_c1ose1 {
+.s1_c1ose1 {
 	position: absolute;
 	width: 974px;
 	height: 94px;
 	left: 25px;
 	bottom: 58px;
 	display: none;
-	z-index: 6;
+	z-index: 8;
 }
 
 @-webkit-keyframes revealStrip {
