@@ -16,8 +16,8 @@
   top: 0px;
   width: 354px;
   height: 768px;
-	animation: fadeInLeft 1s;
-	animation-delay: 0.3s;
+	animation: fadeInLeft 0.5s;
+	animation-delay: 0.0s;
 	animation-fill-mode: both;
 	z-index: 2;
 }
@@ -29,7 +29,7 @@
   width: 534px;
   height: 210px;
 	animation: stampIn 0.3s;
-	animation-delay: 1.5s;
+	animation-delay: 0.5s;
 	animation-fill-mode: both;
 	z-index: 3;
 }
@@ -40,8 +40,8 @@
   top: 401px;
   width: 503px;
   height: 266px;
-	animation: fadeInDownSmall 1s;
-	animation-delay: 2.5s;
+	animation: fadeInDownSmall 0.5s;
+	animation-delay: 1s;
 	animation-fill-mode: both;
 	z-index: 4;
 }

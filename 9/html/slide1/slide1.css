@@ -16,8 +16,8 @@
   top: 83px;
   width: 814px;
   height: 530px;
-	animation: fadeInRight 1s;
-	animation-delay: 0.3s;
+	animation: fadeInRight 0.5s;
+	animation-delay: 0.0s;
 	animation-fill-mode: both;
 	z-index: 2;
 }
