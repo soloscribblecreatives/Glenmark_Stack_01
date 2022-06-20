@@ -12,10 +12,10 @@
 
 .s1_1 {
   position: absolute;
-  left: 624px;
-  top: 37px;
-  width: 281px;
-  height: 284px;
+  left: 578px;
+  top: 560px;
+  width: 343px;
+  height: 204px;
   z-index: 2;
   animation: slideInDown 1s;
   animation-delay: 0.2s;
@@ -24,10 +24,10 @@
 
 .s1_2 {
   position: absolute;
-  left: 857px;
-  top: 117px;
-  width: 151px;
-  height: 368px;
+  left: 662px;
+  top: 526px;
+  width: 369px;
+  height: 146px;
   z-index: 3;
   animation: slideInDown 1.6s;
   animation-delay: 0.6s;
@@ -36,8 +36,8 @@
 
 .s1_3 {
   position: absolute;
-  left: 631px;
-  top: 190px;
+  left: 296px;
+  top: 546px;
   width: 344px;
   height: 201px;
   z-index: 4;
@@ -48,8 +48,8 @@
 
 .s1_4 {
   position: absolute;
-  left: 640px;
-  top: 19px;
+  left: 457px;
+  top: 623px;
   width: 378px;
   height: 121px;
   animation: slideInDown 1.5s;
@@ -72,10 +72,10 @@
 
 .s1_6 {
   position: absolute;
-  left: 654px;
-  top: 354px;
-  width: 333px;
-  height: 218px;
+  left: 302px;
+  top: 599px;
+  width: 373px;
+  height: 138px;
   z-index: 7;
   animation: slideInDown 1s;
   animation-delay: 0.2s;
@@ -84,8 +84,8 @@
 
 .s1_7 {
   position: absolute;
-  left: 599px;
-  top: 52px;
+  left: 258px;
+  top: 579px;
   width: 388px;
   height: 116px;
   z-index: 8;
@@ -96,8 +96,8 @@
 
 .s1_8 {
   position: absolute;
-  left: 618px;
-  top: 623px;
+  left: 616px;
+  top: 614px;
   width: 388px;
   height: 117px;
   z-index: 9;
@@ -108,10 +108,10 @@
 
 .s1_9 {
   position: absolute;
-  left: 569px;
-  top: 376px;
+  left: 185px;
+  top: 678px;
   width: 390px;
-  height: 55px;
+  height: 62px;
   z-index: 10;
   animation: slideInDown 1.4s;
   animation-delay: 0.5s;
@@ -132,8 +132,8 @@
 
 .s1_11 {
   position: absolute;
-  left: 609px;
-  top: 230px;
+  left: 561px;
+  top: 618px;
   width: 378px;
   height: 121px;
   z-index: 12;
@@ -144,8 +144,8 @@
 
 .s1_12 {
   position: absolute;
-  left: 598px;
-  top: 487px;
+  left: 414px;
+  top: 631px;
   width: 379px;
   height: 116px;
   z-index: 13;
@@ -158,8 +158,8 @@
   position: absolute;
   left: 0px;
   top: 0px;
-  width: 62px;
-  height: 389px;
+  width: 205px;
+  height: 343px;
   z-index: 14;
   animation: slideInDown 1s;
   animation-delay: 0.2s;
@@ -168,10 +168,10 @@
 
 .s1_13_wrap {
   position: absolute;
-  left: 794px;
-  top: 190px;
-  width: 62px;
-  height: 389px;
+  left: 687px;
+  top: 413px;
+  width: 205px;
+  height: 343px;
   z-index: 14;
   animation: pulse 1s infinite;
   animation-delay: 2s;
@@ -188,22 +188,25 @@
   animation-fill-mode: both;
 }
 
-.s1_13_drag_Out {
-  position: absolute;
-  left: 794px;
-  top: 190px;
-  width: 62px;
-  height: 389px;
-  z-index: 14;
-  animation: slideRight 1s;
+.s1_14_drag_Out {
+  animation: slideLeft 1s;
   animation-delay: 0s;
   animation-fill-mode: both;
+}
+
+.s1_14_wrap {
+  position: absolute;
+  left: 0px;
+  top: 472px;
+  width: 452px;
+  height: 296px;
+  z-index: 15;
 }
 
 .s1_14 {
   position: absolute;
   left: 0px;
-  top: 472px;
+  top: 0px;
   width: 452px;
   height: 296px;
   z-index: 15;
@@ -230,7 +233,7 @@
   height: 168px;
   z-index: 15;
   animation: fadeInDown 1s;
-  animation-delay: 0.5s;
+  animation-delay: 1s;
   animation-fill-mode: both;
   display: none;
 }
@@ -250,16 +253,30 @@
   }
 }
 
-@keyframes slideRightBig2 {
+
+@keyframes slideLeft {
   from {
     opacity: 1;
-	top: 0px;
+	left: 0px;
+	top: 472px;
   }
 
   to {
     opacity: 1;
-	top: -500px;
-	transform: rotate3d(0, 0, 1, 100deg);
+	top: 472px;
+	left: 270px;
+  }
+}
+
+@keyframes slideRightBig2 {
+  from {
+    opacity: 1;
+	left: 0px;
+  }
+
+  to {
+    opacity: 1;
+	left: -950px;
   }
 }
 
@@ -271,6 +288,6 @@
 
   to {
     opacity: 1;
-	left: -500px;
+	left: -900px;
   }
 }

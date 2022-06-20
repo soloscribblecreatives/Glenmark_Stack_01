@@ -492,7 +492,7 @@ $(document).ready(function(){
 
 
 function dragOut() {
-	$(".s1_13_wrap").addClass("s1_13_drag_Out");
+	$(".s1_14_wrap").addClass("s1_14_drag_Out");
 	
 	setTimeout(function() {
 		$(".s1_13").addClass("s1_13_wrap_right");
