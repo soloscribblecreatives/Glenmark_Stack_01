@@ -3,7 +3,7 @@
   padding: 0px;
 }
 
-.s1_1 {
+.s1_bg {
   position: absolute;
   width: 1024px;
   height: 768px;
@@ -30,7 +30,7 @@
   height: 146px;
   z-index: 3;
   animation: slideInDown 1.6s;
-  animation-delay: 0.6s;
+  animation-delay: 0.3s;
   animation-fill-mode: both;
 }
 
@@ -42,7 +42,7 @@
   height: 201px;
   z-index: 4;
   animation: slideInDown 1.9s;
-  animation-delay: 0.7s;
+  animation-delay: 0.4s;
   animation-fill-mode: both;
 }
 
@@ -114,7 +114,7 @@
   height: 62px;
   z-index: 10;
   animation: slideInDown 1.4s;
-  animation-delay: 0.5s;
+  animation-delay: 0.3s;
   animation-fill-mode: both;
 }
 
@@ -174,8 +174,18 @@
   height: 343px;
   z-index: 14;
   animation: pulse 1s infinite;
-  animation-delay: 2s;
+  animation-delay: 2.5s;
   animation-fill-mode: both;
+}
+
+.s1_13_click {
+  position: absolute;
+  left: 687px;
+  top: 413px;
+  width: 205px;
+  height: 343px;
+  display: none;
+  z-index: 18;
 }
 
 .s1_13_wrap_right {
@@ -211,7 +221,7 @@
   height: 296px;
   z-index: 15;
   animation: slideInLeft 1s;
-  animation-delay: 1.5s;
+  animation-delay: 2.5s;
   animation-fill-mode: both;
 }
 
@@ -276,7 +286,7 @@
 
   to {
     opacity: 1;
-	left: -950px;
+	left: -900px;
   }
 }
 
@@ -288,6 +298,6 @@
 
   to {
     opacity: 1;
-	left: -900px;
+	left: -930px;
   }
 }
