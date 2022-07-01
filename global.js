@@ -493,7 +493,7 @@ $(document).ready(function(){
 
 	setTimeout(function() {
 		$('.s1_13_click').css("display","block");
-	}, 14000);
+	}, 29000);
 
 function dragOut() {
 	$(".s1_14_wrap").addClass("s1_14_drag_Out");
