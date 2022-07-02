@@ -145,7 +145,7 @@
 
 .s1_2 {
   position: absolute;
-  left: 662px;
+  left: 640px;
   top: 526px;
   width: 369px;
   height: 146px;
@@ -318,17 +318,27 @@
   width: 205px;
   height: 343px;
   z-index: 14;
-  animation: pulse 1s infinite;
+  animation: none 1s infinite;
   animation-delay: 36.5s;
   animation-fill-mode: both;
 }
 
-.s1_13_click {
+/* .s1_13_click {
   position: absolute;
   left: 687px;
   top: 413px;
   width: 205px;
   height: 343px;
+  display: none;
+  z-index: 18;
+}
+ */
+.s1_13_click {
+  position: absolute;
+  left: 0px;
+  top: 447px;
+  width: 485px;
+  height: 321px;
   display: none;
   z-index: 18;
 }
@@ -346,6 +356,12 @@
 .s1_14_drag_Out {
   animation: slideLeft 1s;
   animation-delay: 0s;
+  animation-fill-mode: both;
+}
+
+.s1_14_pulse {
+  animation: pulse 1s infinite;
+  animation-delay: 36.5s;
   animation-fill-mode: both;
 }
 
@@ -385,10 +401,23 @@
   left: 222px;
   top: 81px;
   width: 581px;
-  height: 228px;
+  height: 147px;
   z-index: 15;
   animation: zoomIn 1s;
   animation-delay: 1.5s;
+  animation-fill-mode: both;
+  display: none;
+}
+
+.s1_26 {
+  position: absolute;
+  left: 222px;
+  top: 242px;
+  width: 310px;
+  height: 67px;
+  z-index: 15;
+  animation: zoomInUp 1s;
+  animation-delay: 2.5s;
   animation-fill-mode: both;
   display: none;
 }
