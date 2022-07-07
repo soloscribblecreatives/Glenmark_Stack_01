@@ -422,6 +422,17 @@
   display: none;
 }
 
+.s1_27 {
+  position: absolute;
+  width: 1024px;
+  height: 768px;
+  z-index: 60;
+  animation: slideInDown 1s;
+  animation-delay: 4.5s;
+  animation-fill-mode: both;
+  display: none;
+}
+
 .s1_17 {
   position: absolute;
   left: 124px;
