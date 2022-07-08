@@ -11,6 +11,21 @@
 }
 
 
+.fullWrap {
+  position: absolute;
+  width: 1024px;
+  height: 768px;
+  z-index: 10;
+}
+
+.flyUp {
+  animation: flyUp 0.7s;
+  animation-delay: 2s;
+  animation-fill-mode: both;
+  z-index: 10;
+}
+
+
 .s1_18 {
   position: absolute;
   left: 162px;
@@ -18,7 +33,7 @@
   width: 700px;
   height: 52px;
   animation: zoomInOut 4s;
-  animation-delay: 1.5s;
+  animation-delay: 2s;
   animation-fill-mode: both;
   z-index: 30;
 }
@@ -340,7 +355,7 @@
   width: 485px;
   height: 321px;
   display: none;
-  z-index: 18;
+  z-index: 80;
 }
 
 .s1_13_wrap_right {
@@ -371,7 +386,7 @@
   top: 472px;
   width: 452px;
   height: 296px;
-  z-index: 15;
+  z-index: 20;
 }
 
 .s1_14 {
@@ -380,7 +395,7 @@
   top: 0px;
   width: 452px;
   height: 296px;
-  z-index: 15;
+  z-index: 20;
   animation: slideInLeft 1s;
   animation-delay: 35.5s;
   animation-fill-mode: both;
@@ -390,7 +405,7 @@
   position: absolute;
   width: 62px;
   height: 389px;
-  z-index: 14;
+  z-index: 20;
   animation: slideRightBig1 1s;
   animation-delay: 0.5s;
   animation-fill-mode: both;
@@ -398,37 +413,52 @@
 
 .s1_15 {
   position: absolute;
-  left: 222px;
-  top: 81px;
+  left: 44px;
+  top: 41px;
   width: 581px;
   height: 147px;
   z-index: 15;
   animation: zoomIn 1s;
-  animation-delay: 1.5s;
+  animation-delay: 4s;
   animation-fill-mode: both;
   display: none;
 }
 
 .s1_26 {
   position: absolute;
-  left: 222px;
-  top: 242px;
+  left: 44px;
+  top: 202px;
   width: 310px;
   height: 67px;
   z-index: 15;
   animation: zoomInUp 1s;
-  animation-delay: 2.5s;
+  animation-delay: 5s;
   animation-fill-mode: both;
   display: none;
 }
 
 .s1_27 {
   position: absolute;
-  width: 1024px;
-  height: 768px;
+  left: 822px;
+  top: 25px;
+  width: 179px;
+  height: 89px;
   z-index: 60;
   animation: slideInDown 1s;
-  animation-delay: 4.5s;
+  animation-delay: 3s;
+  animation-fill-mode: both;
+  display: none;
+}
+
+.s1_28 {
+  position: absolute;
+  left: 31px;
+  top: 632px;
+  width: 960px;
+  height: 104px;
+  z-index: 60;
+  animation: fadeInUp 0.7s;
+  animation-delay: 2s;
   animation-fill-mode: both;
   display: none;
 }
@@ -533,5 +563,21 @@
     opacity: 0;
     -webkit-transform: scale3d(0.3, 0.3, 0.3);
     transform: scale3d(0.3, 0.3, 0.3);
+  }
+}
+
+@keyframes flyUp {
+  0% {
+	transform: scale(1);
+	  left: 0px;
+	  top: 0px;
+	  opacity: 1;
+  }
+  
+  100% {
+	transform: scale(1);
+	  left: -100px;
+      top: -200px;
+	  opacity: 1;
   }
 }
