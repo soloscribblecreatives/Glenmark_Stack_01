@@ -1,177 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta http-equiv="Content-Security-Policy" content="default-src * gap://ready file:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
-    <meta name="viewport" content="width=device-width,height=device-height,minimum-scale=1,maximum-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.css" />
-    <link rel="stylesheet" href="css/animate.css" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/new.css" />
-	<script type="text/javascript" src="cordova.js"></script>
-    <script type='application/javascript' src='js/fastclick.js'></script>
-    <script src="js/jquery-1.11.1.min.js"></script>
-    <script src="js/jquery.mobile-1.4.5.min.js"></script>
-    <script src="js/jquery.transit.min.js"></script>
-    <script src="js/fastclick.js"></script>
-    <script src="js/index.js"></script>
-    <script type="text/javascript">
-        app.initialize();
-        // $(function() {
-        //     FastClick.attach(document.body);
-        // });
-        // });
-    </script>
-    <script type="application/javascript">
-        window.addEventListener('load', function() {
-           var testB = document.getElementById('test-b');
-           FastClick.attach(testB);
-        }, false);
-    </script>
-    <style type="text/css">
-        /* Disable certain interactions on touch devices */
-        body {
-			user-select: none;
-            -webkit-touch-callout: none;
-            -webkit-text-size-adjust: none;
-            -webkit-user-select: none;
-            -webkit-highlight: none;
-            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-        }
-    </style>
-    <style type="text/css">
-        #playbtn {
-            position: relative;
-            width: 20%;
-            margin: 0 auto;
-            margin-left: 40%;
-            margin-top: 40%;
-        }
+<meta charset="UTF-8"/>
+<meta http-equiv="cache-control" content="max-age=200"/>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<title>Telma CT</title>
+<link rel="stylesheet" type="text/css" href="animate.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="global.css" media="screen"/>
 
-        #main-img {
-            position: absolute;
-        }
-
-        .augpages {
-            height: 100%;
-            overflow: hidden;
-        }
-
-        .in {
-			animation-timing-function: ease-out;
-			animation-duration: 5350ms;
-            -webkit-animation-timing-function: ease-out;
-            -webkit-animation-duration: 5350ms;
-            -moz-animation-timing-function: ease-out;
-            -moz-animation-duration: 5350ms;
-        }
-
-        .augpages .p3 {
-            background: url('videos/15aug.jpg');
-        }
-
-        .form-page input[type="text"] {
-            border: none;
-            background-color: transparent;
-            /* Other stuff: font-weight, font-size */
-        }
-        .row{
-   display: flex;
-    flex-flow: column-reverse;
-     }
-    </style>
+<script src="jquery.min.js" type="text/javascript" language="javascript"></script>
+<script src="jquery.mobile.custom.min.js" type="text/javascript" language="javascript"></script>
+<script src="jquery.touchSwipe.min.js" type="text/javascript" language="javascript"></script>
 </head>
+
 <body>
+<div id="wrapper" rel="1">
+  <div class="menu"> <img src="menu.png" width="37" alt=""> </div>
+  <div class="slide_arrow">
+    <div class="left_arrow" ><img src="left_arrow.png" alt="previous icon" width="23" height="23" ></div>
+    <div class="right_arrow" ><img src="right_arrow.png" alt="next icon" width="23" height="23"></div>
+  </div>
+  <div id="main_content"></div>
+<!--   <div class="reference active">
+    <div class="box">
+      <div class="slide_jumper">
+		  <div class="slides"><img src="thumbs/01.png" alt=""></div>
+      </div>
+    </div>
+    <div class="box_btn"></div>
+  </div> -->
+  <div id="myconsole"></div>
+<div id="click_through"></div>
+</div>
 
+<script src="global.js" type="text/javascript" language="javascript"></script> 
+<script>
+var startTime = Date.now();
 
-	<div data-role="page" id="p1_1" style="overflow: hidden;">
-        <img src="images/page01.jpg" class="CircleImage">
-        <div id="fluid-container">
-            <div class="pgclick pgclick1_1" onclick="changepage('p1_2');startTimer();"></div>
-				
-        </div>
-        </div>
-        <!-- <div data-role="page" id="p1_2" style="overflow: hidden;">
-            <img src="images/page01.jpg" class="CircleImage">
-            <div id="fluid-container">
-                <div class="pgclick pgclick2_1" onclick="changepage('p1_3');"></div>
-                    
-            </div>
-            </div> -->
-        <div data-role="page" id="p1_2" style="overflow: hidden;">
-          
-			<img src="images/page02.jpg" class="CircleImage"  >
-            
-        
-			<div id="fluid-container">
-                <div class="counterTime" id="timer_txt">15</div>
-                    <img id="p1_3-1"  src="images/apple1.png" onclick="this.src='images/happy_heart.png'; onClick();resetImage()" >
-                    <img id="p1_3-2"  src="images/apple2.png" onclick="this.src='images/happy_heart.png'; onClick();resetImage()">
-                    <img id="p1_3-3"  src="images/apple3.png" onclick="this.src='images/happy_heart.png'; onClick();resetImage()" >
-                    <img id="p1_3-4"  src="images/apple4.png" onclick="this.src='images/happy_heart.png'; onClick();resetImage()" >
-                    <img id="p1_3-5"  src="images/apple5.png" onclick="this.src='images/happy_heart.png'; onClick();resetImage()" >
-                    <img id="p1_3-6"  src="images/apple6.png" onclick="this.src='images/happy_heart.png'; onClick();resetImage()" >
-                    <img id="p1_3-7"  src="images/apple7.png" onclick="this.src='images/happy_heart.png'; onClick();resetImage()" >
-                    <img id="p1_3-8"  src="images/apple8.png" onclick="this.src='images/happy_heart.png'; onClick();resetImage()" >
-                    <img id="p1_3-17"  src="images/apple9.png" onclick="this.src='images/happy_heart.png'; onClick();resetImage()" >
-                    <img id="p1_3-18"  src="images/apple10.png" onclick="this.src='images/happy_heart.png'; onClick();resetImage()">
-                    <img id="p1_3-19"  src="images/apple11.png" onclick="this.src='images/happy_heart.png'; onClick();resetImage()" >
-                    <img id="p1_3-20"  src="images/apple12.png" onclick="this.src='images/happy_heart.png'; onClick();resetImage()" >
-                    <img id="p1_3-21"  src="images/apple13.png" onclick="this.src='images/happy_heart.png'; onClick();resetImage()" >
-                    <img id="p1_3-22"  src="images/apple14.png" onclick="this.src='images/happy_heart.png'; onClick();resetImage()" >
-                    <img id="p1_3-23"  src="images/apple15.png" onclick="this.src='images/happy_heart.png'; onClick();resetImage()" >
-                    <img id="p1_3-24"  src="images/apple16.png" onclick="this.src='images/happy_heart.png'; onClick();resetImage()" >
-                <img id="p1_3-9" src="images/burger1.png" onclick="this.src='images/sad_heart.png'; resetImage()" >
-                <img id="p1_3-10" src="images/burger2.png" onclick="this.src='images/sad_heart.png'; resetImage()" >
-                <img id="p1_3-11" src="images/burger3.png" onclick="this.src='images/sad_heart.png'; resetImage()" >
-                <img id="p1_3-12" src="images/burger4.png" onclick="this.src='images/sad_heart.png'; resetImage()" >   
-                <img id="p1_3-13" src="images/burger5.png" onclick="this.src='images/sad_heart.png'; resetImage()" >
-                <img id="p1_3-14" src="images/burger6.png" onclick="this.src='images/sad_heart.png'; resetImage()" >
-                <img id="p1_3-15" src="images/burger7.png" onclick="this.src='images/sad_heart.png'; resetImage()" >
-                <img id="p1_3-16" src="images/burger8.png" onclick="this.src='images/sad_heart.png'; resetImage()" >
-                <img id="p1_3-25" src="images/burger9.png" onclick="this.src='images/sad_heart.png'; resetImage()" >
-                <img id="p1_3-26" src="images/burger10.png" onclick="this.src='images/sad_heart.png'; resetImage()" >
-                <div class="counterWhite" id="clickWhite">0</div>
-          
-               <div class="popup-overlay">
-                    <div class="popup-content">
-                        <img src="images/page03.jpg" style="width:100%;height:auto;top:0px;position: absolute;left: 0px;" id="popUpImage1_2">
-                        <div class="counterRed" id="clickRed">0</div>
-                        <div class="close" id="close"></div>
-                    </div>
-                </div>
-               
-             
-                
+//step 1:
+var temp = localStorage.getItem(currentContentId+"_"+contentName+"_slideNo_1");
+	
+	if(temp == null){
+		localStorage.setItem(currentContentId+"_"+contentName+"_slideNo_1" ,startTime);
+		localStorage.setItem(currentContentId+"_"+contentName+"_totalTime_slideNo_1",0);
+		//to capture start time of 1st slide in db format
+		var startTime1InDBFormat = currentTimeInDatabaseFormat();
+		//alert(startTime1InDBFormat);
+		localStorage.setItem(currentContentId+"_"+contentName+"_StartTime_1" ,startTime1InDBFormat);
+	}
+//step 1 ends here..
 
-                </div>
-               
-         
-			</div>
-          
+$(document).ready(function(){
+  // jQuery(".next").bind(event, function(){
+  //     document.location = 'VoltarenVAsb/VoltarenVAsb.html';
+  //     });
+var selectedContentPath = 'slide1/';
+//  document.getElementById("main_content").innerHTML='<object type="text/html" width="1024px" height="768px" data="'+selectedContentPath+"Dlight1.htm"+'"></object>';
 
-            <div data-role="page" id="p1_3" style="overflow: hidden;">
-				<img src="images/page04.jpg" class="CircleImage">
-    
-				<div id="fluid-container" >
-				  
-				</div>
-                </div>
-                <div data-role="page" id="p1_4" style="overflow: hidden;">
-                    <img src="images/page05.jpg" class="CircleImage" >
-        
-                    <div id="fluid-container">
-                       
-                    </div>
-                    </div>
-                    <div data-role="page" id="p1_5" style="overflow: hidden;">
-                        <img src="images/page06.jpg" class="CircleImage" >
-            
-                        <div id="fluid-container">
-                           
-                        </div>
-                        </div>
-                       
+//custom slide additional code begins here....
+
+if (typeof(localStorage.getItem("currentcustomslideflag"))!='undefined' && localStorage.getItem("currentcustomslideflag") =='true'){
+	var custcomslideid = parseInt(localStorage.getItem("currentcontentcustomslideId")) ;
+	
+	switch(custcomslideid){
+		case 1:
+		content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><iframe src="slide1/index.html" height="768" width="1024" title="Iframe Example" frameborder="0"></iframe></div>';
+		break;
+	}
+
+	$("#main_content").html(content);
+	  localStorage.setItem("gotoNextPrevBrand" ,1);//if one than next if 2 than prev
+
+//custom slide additional code ends here....	 
+	 
+}else{
+
+$("#main_content").html('<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><iframe src="slide1/index.html" height="768" width="1024" title="Iframe Example" frameborder="0"></iframe></div>');
+
+}
+
+});
+</script> 
+
 </body>
-
 </html>
