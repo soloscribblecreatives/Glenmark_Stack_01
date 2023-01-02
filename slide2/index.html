@@ -21,12 +21,18 @@
         //     FastClick.attach(document.body);
         // });
         // });
+		
+		$(function(){
+			startTimer();
+		});
     </script>
     <script type="application/javascript">
         window.addEventListener('load', function() {
            var testB = document.getElementById('test-b');
            FastClick.attach(testB);
         }, false);
+		
+		
     </script>
     <style type="text/css">
         /* Disable certain interactions on touch devices */
@@ -131,13 +137,13 @@
 <body>
 
 
-	<div data-role="page" id="p1_1" style="overflow: hidden;">
+<!-- 	<div data-role="page" id="p1_1" style="overflow: hidden;">
         <img src="images/page01.jpg" class="CircleImage">
         <div id="fluid-container">
             <div class="pgclick pgclick1_1" onclick="changepage('p1_2');startTimer();appleBlock();"></div>
 				
         </div>
-        </div>
+        </div> -->
         <!-- <div data-role="page" id="p1_2" style="overflow: hidden;">
             <img src="images/page01.jpg" class="CircleImage">
             <div id="fluid-container">
