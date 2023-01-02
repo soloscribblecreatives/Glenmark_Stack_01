@@ -1290,7 +1290,8 @@ function startTimer(stage) {
             $(".popup-overlay, .popup-content").css('display', 'block');
             $('#popUpImage1_2').attr('src', 'images/page03.jpg')
             $(".popup-overlay, .popup-content").addClass("active");
-            setTimeout(function () {
+			
+/*             setTimeout(function () {
                 $(".popup-overlay, .popup-content").removeClass("active");
             },4200 );
 			
@@ -1302,7 +1303,7 @@ function startTimer(stage) {
 			},7000 );
 			setTimeout(function () {
 				$(".p1_55").css('display', 'block');
-			},10000 );
+			},10000 ); */
        }
        
     }, 1000)
