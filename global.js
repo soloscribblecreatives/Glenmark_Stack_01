@@ -385,10 +385,10 @@ currentSlide();
 var selectedContentPath='';
 switch(pg_id){
 	case 1:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><video width="1024" height="768" preload="none" controls autoplay><source src="slide1/1.mp4" type="video/mp4"></video>';
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="s1_1"><img src="slide1/s1_1.png"/></div><div class="s1_2"><img src="slide1/s1_2.png"/></div><div class="s1_3"><img src="slide1/s1_3.png"/></div><div class="s1_4"><img src="slide1/s1_4.png"/></div><div class="s1_5"><img src="slide1/s1_5.png"/></div><div class="s1_6"><img src="slide1/s1_6.png"/></div><div class="s1_7"><img src="slide1/s1_7.png"/></div>';
 	break;
 	case 2:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><video width="1024" height="768" preload="none" controls autoplay><source src="slide2/1.mp4" type="video/mp4"></video>';
+	content='<link rel="stylesheet" type="text/css" href="slide2/slide2.css" media="screen"/><div class="s2_1"><img src="slide2/s2_1.png"/></div><div class="s2_2"><img src="slide2/s2_2.png"/></div><div class="s2_3"><img src="slide2/s2_3.png"/></div><div class="s2_4"><img src="slide2/s2_4.png"/></div><div class="s2_5"><img src="slide2/s2_5.png"/></div><div class="s2_6"><img id="s2_6" src="slide2/s2_6.png"/></div><div class="s2_7"><img src="slide2/s2_7.png"/></div><div class="s2_8"><img src="slide2/s2_8.png"/></div><div class="s2_9"><img src="slide2/s2_9.png"/></div>';
 	break;
 	case 3:
 	content='<link rel="stylesheet" type="text/css" href="slide1/slide2.css" media="screen"/><div class="background"><img src="slide3/1.jpg" width="1024" height="768" alt=""></div>';
@@ -553,16 +553,28 @@ $(document).ready(function(){
 })
 
 
-//----------------------------------//
+/*--------------------- animation javascript -----------------------*/
 
-function pop_open() {
-	$('.popup').css('display','block');
-	$('.pop_open').css('display','none');
-	$('.pop_close').css('display','block');
+function pop_open1() {
+	$('.popup1').css("display","block");
+	$('.pop_close1').css("display","block");
+	$('.pop_open1').css("display","none");
 }
 
-function pop_close() {
-	$('.popup').css('display','none');
-	$('.pop_open').css('display','block');
-	$('.pop_close').css('display','none');
+function pop_close1() {
+	$('.popup1').css("display","none");
+	$('.pop_close1').css("display","none");
+	$('.pop_open1').css("display","block");
+}
+
+function pop_open2() {
+	$('.popup2').css("display","block");
+	$('.pop_close2').css("display","block");
+	$('.pop_open2').css("display","none");
+}
+
+function pop_close2() {
+	$('.popup2').css("display","none");
+	$('.pop_close2').css("display","none");
+	$('.pop_open2').css("display","block");
 }
