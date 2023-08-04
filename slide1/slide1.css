@@ -21,8 +21,8 @@
 
 .nextpop {
 	position: absolute;
-    top: 357px;
-    right: 58px;
+    top: 599px;
+    right: 68px;
     z-index:999999999;
     width: 27px;
     height: 50px;
@@ -30,8 +30,8 @@
 
 .prevpop {
 	position: absolute;
-    top: 357px;
-    left: 58px;
+    top: 599px;
+    left: 881px;
     z-index:999999999;
     width: 27px;
     height: 50px;
