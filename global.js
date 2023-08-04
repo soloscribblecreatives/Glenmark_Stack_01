@@ -81,6 +81,7 @@ function touchHandler(e) {
 
 	});
 
+	
 	$(".reference").removeClass("active");
 
 	$('.reference').on('swipeleft swiperight', function(event) {
@@ -198,7 +199,7 @@ if (typeof(localStorage.getItem('currentslide'))!='undefined' && localStorage.ge
 	
  } 
  
-	if(nextSlideNo <= 9){//number 3 is number of total slides present
+	if(nextSlideNo <= 3){//number 3 is number of total slides present
 	// alert(nextSlideNo);
 	var tempNext = localStorage.getItem(currentContentId+"_"+contentName+"_slideNo_"+nextSlideNo);
 
@@ -302,10 +303,10 @@ if(direction == 'b') {
 //custom slide changes ends here....
 
 	else{
-	if(page_id <= 9){
+	if(page_id <= 3){
 		page_id = page_id + 1;
 		//alert(page_id);
-		if(page_id == 10){
+		if(page_id == 4){
             flag=1;
         }
 	}
@@ -332,8 +333,10 @@ $("#wrapper").attr("rel",page_id);
 var content="";
 if(flag==0){
 var pg_content = set_pg_content(page_id);
-
+	$("#main_content").hide();
 	$("#main_content").html(pg_content);
+	$("#main_content").fadeIn();
+	
 }
 	//console.log("pg : "+page_id);
 	if(page_id==4){
@@ -363,6 +366,15 @@ var pg_content = set_pg_content(page_id);
 	 checkClickThrough();
 }
 
+$(document).on("click",".homebtn" , function (event) {
+         open_page("",1);
+        });
+
+
+
+
+
+
 function set_pg_content(pg_id){
 //step 6:-
 //console.log("++++++++pg_id++++"+pg_id+"+++++++currentslide++++++"+localStorage.getItem("currentslide")+"++++++previousslide++++++"+localStorage.getItem("previousslide"));
@@ -385,32 +397,15 @@ currentSlide();
 var selectedContentPath='';
 switch(pg_id){
 	case 1:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="s1_1"><img src="slide1/s1_1.png"/></div><div class="s1_2"><img src="slide1/s1_2.png"/></div><div class="s1_3"><img src="slide1/s1_3.png"/></div><div class="s1_4"><img src="slide1/s1_4.png"/></div><div class="s1_5"><img src="slide1/s1_5.png"/></div><div class="s1_6"><img src="slide1/s1_6.png"/></div><div class="s1_7"><img src="slide1/s1_7.png"/></div>';
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide1/1.jpg" width="1024" height="768" alt=""></div><div class="s2" onclick="pop1()"></div><div class="pop_up1"><img src="slide1/pop1.png" width="1024" height="768" alt=""></div><div class="nextpop" onclick="nextpop()"></div><div class="c1ose1" onclick="close1()"></div><div class="pop_up2"><img src="slide1/pop2.png" width="1024" height="768" alt=""></div><div class="prevpop" onclick="prevpop()"></div><div class="c1ose2" onclick="close2()"></div><div class="refpop"><img src="slide1/refpop.png" width="1024" height="768" alt=""></div><div class="refclose" onclick="refclose()"></div><div class="apipop"><img src="slide1/apipop.png" width="1024" height="768" alt=""></div><div class="apiclose" onclick="apiclose()"></div><div class="homebtn"></div><div class="refbtn" onclick="refbtn()"></div><div class="apibtn" onclick="apibtn()"></div>';
 	break;
 	case 2:
-	content='<link rel="stylesheet" type="text/css" href="slide2/slide2.css" media="screen"/><div class="s2_1"><img src="slide2/s2_1.png"/></div><div class="s2_2"><img src="slide2/s2_2.png"/></div><div class="s2_3"><img src="slide2/s2_3.png"/></div><div class="s2_4"><img src="slide2/s2_4.png"/></div><div class="s2_5"><img src="slide2/s2_5.png"/></div><div class="s2_6"><img id="s2_6" src="slide2/s2_6.png"/></div><div class="s2_7"><img src="slide2/s2_7.png"/></div><div class="s2_8"><img src="slide2/s2_8.png"/></div><div class="s2_9"><img src="slide2/s2_9.png"/></div>';
-	break;
+	content='<link rel="stylesheet" type="text/css" href="slide2/slide2.css" media="screen"/><div class="background"><img src="slide2/1.jpg" width="1024" height="768" alt=""></div><div class="refpop"><img src="slide2/refpop.png" width="1024" height="768" alt=""></div><div class="refclose" onclick="refclose()"></div><div class="apipop"><img src="slide2/apipop.png" width="1024" height="768" alt=""></div><div class="apiclose" onclick="apiclose()"></div><div class="homebtn"></div><div class="refbtn" onclick="refbtn()"></div><div class="apibtn" onclick="apibtn()"></div>';
+	break;	
 	case 3:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide2.css" media="screen"/><div class="background"><img src="slide3/1.jpg" width="1024" height="768" alt=""></div>';
-	break;
-	case 4:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide2.css" media="screen"/><div class="background"><img src="slide4/1.jpg" width="1024" height="768" alt=""></div>';
-	break;
-	case 5:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide2.css" media="screen"/><div class="background"><img src="slide5/1.jpg" width="1024" height="768" alt=""></div>';
-	break;
-	case 6:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide2.css" media="screen"/><div class="background"><img src="slide6/1.jpg" width="1024" height="768" alt=""></div>';
-	break;
-	case 7:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide2.css" media="screen"/><div class="background"><img src="slide7/1.jpg" width="1024" height="768" alt=""></div>';
-	break;
-	case 8:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide2.css" media="screen"/><div class="background"><img src="slide8/1.jpg" width="1024" height="768" alt=""></div>';
-	break;
-	case 9:
-	content='<link rel="stylesheet" type="text/css" href="slide9/slide2.css" media="screen"/><div class="background"><img src="slide9/1.jpg" width="1024" height="768" alt=""></div>';
-	break;
+	content='<link rel="stylesheet" type="text/css" href="slide3/slide3.css" media="screen"/><div class="background"><img src="slide3/1.jpg" width="1024" height="768" alt=""></div><div class="refpop"><img src="slide3/refpop.png" width="1024" height="768" alt=""></div><div class="refclose" onclick="refclose()"></div><div class="apipop"><img src="slide3/apipop.png" width="1024" height="768" alt=""></div><div class="apiclose" onclick="apiclose()"></div><div class="homebtn"></div><div class="refbtn" onclick="refbtn()"></div><div class="apibtn" onclick="apibtn()"></div>';
+	break;	
+	
 }
 
 return content;
@@ -550,31 +545,84 @@ $(document).ready(function(){
 //alert('hi')
 		$('.touchbtn').css("display","block");
 	})
+	
+	
+	
+	
 })
-
 
 /*--------------------- animation javascript -----------------------*/
 
-function pop_open1() {
-	$('.popup1').css("display","block");
-	$('.pop_close1').css("display","block");
-	$('.pop_open1').css("display","none");
+function pop1() {
+	$('.pop_up1').css("display","block");
+	$('.pop1').css("display","none");
+	$('.nextpop').css("display","block");
+	$('.c1ose1').css("display","block");
 }
 
-function pop_close1() {
-	$('.popup1').css("display","none");
-	$('.pop_close1').css("display","none");
-	$('.pop_open1').css("display","block");
+function close1() {
+	$('.pop_up1').css("display","none");
+	$('.pop1').css("display","block");
+	$('.c1ose1').css("display","none");
+	$('.nextpop').css("display","none");
 }
 
-function pop_open2() {
-	$('.popup2').css("display","block");
-	$('.pop_close2').css("display","block");
-	$('.pop_open2').css("display","none");
+function nextpop() {
+	$('.pop_up2').css("display","block");
+	$('.pop_up1').css("display","none");
+	$('.pop2').css("display","none");
+	$('.pop1').css("display","none");
+	$('.c1ose2').css("display","block");
+	$('.c1ose1').css("display","none");
 }
 
-function pop_close2() {
-	$('.popup2').css("display","none");
-	$('.pop_close2').css("display","none");
-	$('.pop_open2').css("display","block");
+function prevpop() {
+	$('.pop_up2').css("display","none");
+	$('.pop_up1').css("display","block");
+	$('.pop2').css("display","none");
+	$('.pop1').css("display","block");
+	$('.c1ose2').css("display","none");
+	$('.c1ose1').css("display","block");
 }
+
+function close2() {
+	$('.pop_up2').css("display","none");
+	$('.pop_up1').css("display","none");
+	$('.pop2').css("display","none");
+	$('.pop1').css("display","none");
+	$('.c1ose2').css("display","none");
+	$('.c1ose1').css("display","none");
+}
+
+function apibtn() {
+	$(".apipop").fadeIn();
+	$('.api').css("display","none");
+	$('.apiclose').css("display","block");
+}
+
+function apiclose() {
+	$(".apipop").fadeOut();
+	$('.api').css("display","block");
+	$('.apiclose').css("display","none");
+}
+
+function refbtn() {
+	$(".refpop").fadeIn();
+	$('.ref').css("display","none");
+	$('.refclose').css("display","block");
+}
+
+function refclose() {
+	$(".refpop").fadeOut();
+	$('.ref').css("display","block");
+	$('.refclose').css("display","none");
+}
+
+
+
+
+
+
+
+
+

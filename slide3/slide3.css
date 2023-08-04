@@ -7,4 +7,43 @@
 	position: absolute;
 	width: 1024px;
 	height: 768px;
+	z-index: 1;
 }
+.refpop {
+    position: absolute;
+    width: 1024px;
+    height: 768px;
+    display: none;
+    z-index: 999;
+}
+
+.refclose {
+    position: absolute;
+    width: 1024px;
+    height: 768px;
+    display: none;
+    z-index: 999;
+}
+
+
+.apipop {
+    position: absolute;
+    width: 1024px;
+    height: 768px;
+    display: none;
+    z-index: 8;
+}
+
+.apiclose {
+    position: absolute;
+    width: 1024px;
+    height: 768px;
+    display: none;
+    z-index: 12;
+}
+
+.homebtn{position: absolute; left: 806px; bottom: 0px; width:46px; height: 53px; z-index: 9}
+.refbtn{position: absolute; left: 871px; bottom: 0px; width:46px; height: 53px; z-index: 9}
+.apibtn{position: absolute; left: 936px; bottom: 0px; width:46px; height: 53px; z-index: 9}
+.faqbtn{position: absolute; left: 947px; bottom: 0px; width:46px; height: 53px; z-index: 9}
+

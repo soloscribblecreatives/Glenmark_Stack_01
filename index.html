@@ -5,7 +5,7 @@
 <meta http-equiv="cache-control" content="max-age=200"/>
 <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
 <meta http-equiv="X-UA-Compatible" content="chrome=1">
-<title>LIFE</title>
+<title>Vilor</title>
 <link rel="stylesheet" type="text/css" href="animate.css" media="screen"/>
 <link rel="stylesheet" type="text/css" href="global.css" media="screen"/>
 
@@ -27,13 +27,7 @@
       <div class="slide_jumper">
 		  <div class="slides"><img src="thumbs/01.png" alt=""></div>
           <div class="slides"><img src="thumbs/02.png" alt=""></div>
-          <div class="slides"><img src="thumbs/03.png" alt=""></div>
-          <div class="slides"><img src="thumbs/04.png" alt=""></div>
-          <div class="slides"><img src="thumbs/05.png" alt=""></div>
-          <div class="slides"><img src="thumbs/06.png" alt=""></div>
-          <div class="slides"><img src="thumbs/07.png" alt=""></div>
-          <div class="slides"><img src="thumbs/08.png" alt=""></div>
-          <div class="slides"><img src="thumbs/09.png" alt=""></div>
+          <div class="slides"><img src="thumbs/03.png" alt=""></div>    
       </div>
     </div>
     <div class="box_btn"></div>
@@ -67,36 +61,20 @@ var selectedContentPath = 'slide1/';
 //custom slide additional code begins here....
 
 if (typeof(localStorage.getItem("currentcustomslideflag"))!='undefined' && localStorage.getItem("currentcustomslideflag") =='true'){
-	var custcomslideid = parseInt(localStorage.getItem("currentcontentcustomslideId")) ;
+	var custcomslideid = parseInt(localStorage.getItem("currentcontentcustomslideId")) ;link(1);
 	
 switch(custcomslideid){
 	case 1:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="s1_1"><img src="slide1/s1_1.png"/></div><div class="s1_2"><img src="slide1/s1_2.png"/></div><div class="s1_3"><img src="slide1/s1_3.png"/></div><div class="s1_4"><img src="slide1/s1_4.png"/></div><div class="s1_5"><img src="slide1/s1_5.png"/></div><div class="s1_6"><img src="slide1/s1_6.png"/></div><div class="s1_7"><img src="slide1/s1_7.png"/></div>';
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide1/1.jpg" width="1024" height="768" alt=""></div><div class="s2" onclick="pop1()"></div><div class="pop_up1"><img src="slide1/pop1.png" width="1024" height="768" alt=""></div><div class="nextpop" onclick="nextpop()"></div><div class="c1ose1" onclick="close1()"></div><div class="pop_up2"><img src="slide1/pop2.png" width="1024" height="768" alt=""></div><div class="prevpop" onclick="prevpop()"></div><div class="c1ose2" onclick="close2()"></div><div class="refpop"><img src="slide1/refpop.png" width="1024" height="768" alt=""></div><div class="refclose" onclick="refclose()"></div><div class="apipop"><img src="slide1/apipop.png" width="1024" height="768" alt=""></div><div class="apiclose" onclick="apiclose()"></div><div class="homebtn"></div><div class="refbtn" onclick="refbtn()"></div><div class="apibtn" onclick="apibtn()"></div>';
 	break;
 	case 2:
-	content='<link rel="stylesheet" type="text/css" href="slide2/slide2.css" media="screen"/><div class="s2_1"><img src="slide2/s2_1.png"/></div><div class="s2_2"><img src="slide2/s2_2.png"/></div><div class="s2_3"><img src="slide2/s2_3.png"/></div><div class="s2_4"><img src="slide2/s2_4.png"/></div><div class="s2_5"><img src="slide2/s2_5.png"/></div><div class="s2_6"><img id="s2_6" src="slide2/s2_6.png"/></div><div class="s2_7"><img src="slide2/s2_7.png"/></div><div class="s2_8"><img src="slide2/s2_8.png"/></div><div class="s2_9"><img src="slide2/s2_9.png"/></div>';
-	break;
+	content='<link rel="stylesheet" type="text/css" href="slide2/slide2.css" media="screen"/><div class="background"><img src="slide2/1.jpg" width="1024" height="768" alt=""></div><div class="refpop"><img src="slide2/refpop.png" width="1024" height="768" alt=""></div><div class="refclose" onclick="refclose()"></div><div class="apipop"><img src="slide2/apipop.png" width="1024" height="768" alt=""></div><div class="apiclose" onclick="apiclose()"></div><div class="homebtn"></div><div class="refbtn" onclick="refbtn()"></div><div class="apibtn" onclick="apibtn()"></div>';
+	break;	
 	case 3:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide2.css" media="screen"/><div class="background"><img src="slide3/1.jpg" width="1024" height="768" alt=""></div>';
-	break;
-	case 4:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide2.css" media="screen"/><div class="background"><img src="slide4/1.jpg" width="1024" height="768" alt=""></div>';
-	break;
-	case 5:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide2.css" media="screen"/><div class="background"><img src="slide5/1.jpg" width="1024" height="768" alt=""></div>';
-	break;
-	case 6:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide2.css" media="screen"/><div class="background"><img src="slide6/1.jpg" width="1024" height="768" alt=""></div>';
-	break;
-	case 7:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide2.css" media="screen"/><div class="background"><img src="slide7/1.jpg" width="1024" height="768" alt=""></div>';
-	break;
-	case 8:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide2.css" media="screen"/><div class="background"><img src="slide8/1.jpg" width="1024" height="768" alt=""></div>';
-	break;
-	case 9:
-	content='<link rel="stylesheet" type="text/css" href="slide9/slide2.css" media="screen"/><div class="background"><img src="slide9/1.jpg" width="1024" height="768" alt=""></div>';
-	break;
+	content='<link rel="stylesheet" type="text/css" href="slide3/slide3.css" media="screen"/><div class="background"><img src="slide3/1.jpg" width="1024" height="768" alt=""></div><div class="refpop"><img src="slide3/refpop.png" width="1024" height="768" alt=""></div><div class="refclose" onclick="refclose()"></div><div class="apipop"><img src="slide3/apipop.png" width="1024" height="768" alt=""></div><div class="apiclose" onclick="apiclose()"></div><div class="homebtn"></div><div class="refbtn" onclick="refbtn()"></div><div class="apibtn" onclick="apibtn()"></div>';
+	break;	
+		
+	
 }
 
 	$("#main_content").html(content);
@@ -106,7 +84,7 @@ switch(custcomslideid){
 	 
 }else{
 
-$("#main_content").html('<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="s1_1"><img src="slide1/s1_1.png"/></div><div class="s1_2"><img src="slide1/s1_2.png"/></div><div class="s1_3"><img src="slide1/s1_3.png"/></div><div class="s1_4"><img src="slide1/s1_4.png"/></div><div class="s1_5"><img src="slide1/s1_5.png"/></div><div class="s1_6"><img src="slide1/s1_6.png"/></div><div class="s1_7"><img src="slide1/s1_7.png"/></div>');
+$("#main_content").html('<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide1/1.jpg" width="1024" height="768" alt=""></div><div class="s2" onclick="pop1()"></div><div class="pop_up1"><img src="slide1/pop1.png" width="1024" height="768" alt=""></div><div class="nextpop" onclick="nextpop()"></div><div class="c1ose1" onclick="close1()"></div><div class="pop_up2"><img src="slide1/pop2.png" width="1024" height="768" alt=""></div><div class="prevpop" onclick="prevpop()"></div><div class="c1ose2" onclick="close2()"></div><div class="refpop"><img src="slide1/refpop.png" width="1024" height="768" alt=""></div><div class="refclose" onclick="refclose()"></div><div class="apipop"><img src="slide1/apipop.png" width="1024" height="768" alt=""></div><div class="apiclose" onclick="apiclose()"></div><div class="homebtn"></div><div class="refbtn" onclick="refbtn()"></div><div class="apibtn" onclick="apibtn()"></div>');
 }
 });
 </script> 
