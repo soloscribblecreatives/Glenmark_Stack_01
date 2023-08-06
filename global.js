@@ -303,10 +303,10 @@ if(direction == 'b') {
 //custom slide changes ends here....
 
 	else{
-	if(page_id <= 3){
+	if(page_id <= 2){
 		page_id = page_id + 1;
 		//alert(page_id);
-		if(page_id == 4){
+		if(page_id == 3){
             flag=1;
         }
 	}
@@ -370,6 +370,14 @@ $(document).on("click",".homebtn" , function (event) {
          open_page("",1);
         });
 
+$(document).on("click",".c1ose1" , function (event) {
+         open_page("",2);
+        });
+
+$(document).on("click",".c1ose2" , function (event) {
+         open_page("",2);
+        });
+
 
 
 
@@ -397,7 +405,7 @@ currentSlide();
 var selectedContentPath='';
 switch(pg_id){
 	case 1:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide1/1.jpg" width="1024" height="768" alt=""></div><div class="s2" onclick="pop1()"></div><div class="pop_up1"><img src="slide1/pop1.png" width="1024" height="768" alt=""></div><div class="nextpop" onclick="nextpop()"></div><div class="c1ose1" onclick="close1()"></div><div class="pop_up2"><img src="slide1/pop2.png" width="1024" height="768" alt=""></div><div class="prevpop" onclick="prevpop()"></div><div class="c1ose2" onclick="close2()"></div><div class="refpop"><img src="slide1/refpop.png" width="1024" height="768" alt=""></div><div class="refclose" onclick="refclose()"></div><div class="apipop"><img src="slide1/apipop.png" width="1024" height="768" alt=""></div><div class="apiclose" onclick="apiclose()"></div><div class="homebtn"></div><div class="refbtn" onclick="refbtn()"></div><div class="apibtn" onclick="apibtn()"></div>';
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide1/1.jpg" width="1024" height="768" alt=""></div><div class="s2" onclick="pop1()"></div><div class="pop_up1"><img src="slide1/pop1.png" width="1024" height="768" alt=""></div><div class="nextpop" onclick="nextpop()"></div><div class="c1ose1"></div><div class="pop_up2"><img src="slide1/pop2.png" width="1024" height="768" alt=""></div><div class="prevpop" onclick="prevpop()"></div><div class="c1ose2"></div><div class="refpop"><img src="slide1/refpop.png" width="1024" height="768" alt=""></div><div class="refclose" onclick="refclose()"></div><div class="apipop"><img src="slide1/apipop.png" width="1024" height="768" alt=""></div><div class="apiclose" onclick="apiclose()"></div><div class="homebtn"></div><div class="refbtn" onclick="refbtn()"></div><div class="apibtn" onclick="apibtn()"></div>';
 	break;
 	case 2:
 	content='<link rel="stylesheet" type="text/css" href="slide2/slide2.css" media="screen"/><div class="background"><img src="slide2/1.jpg" width="1024" height="768" alt=""></div><div class="refpop"><img src="slide2/refpop.png" width="1024" height="768" alt=""></div><div class="refclose" onclick="refclose()"></div><div class="apipop"><img src="slide2/apipop.png" width="1024" height="768" alt=""></div><div class="apiclose" onclick="apiclose()"></div><div class="homebtn"></div><div class="refbtn" onclick="refbtn()"></div><div class="apibtn" onclick="apibtn()"></div>';
