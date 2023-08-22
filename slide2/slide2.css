@@ -10,46 +10,232 @@
 	z-index: 1;
 }
 
-.homebtn{position: absolute; left: 806px; bottom: 0px; width:46px; height: 53px; z-index: 9}
-.refbtn{position: absolute; left: 871px; bottom: 0px; width:46px; height: 53px; z-index: 9}
-.apibtn{position: absolute; left: 936px; bottom: 0px; width:46px; height: 53px; z-index: 9}
-.faqbtn{position: absolute; left: 947px; bottom: 0px; width:46px; height: 53px; z-index: 9}
-
-
-.refpop {
-    position: absolute;
-    width: 1024px;
-    height: 768px;
-    display: none;
-    z-index: 8;
+.s2_1 {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	z-index: 1;
 }
 
-.refclose {
-    position: absolute;
-    width: 1024px;
-    height: 768px;
-    display: none;
-    z-index: 12;
+.s2_2 {
+	position: absolute;
+  left: 0px;
+  top: 172px;
+  width: 433px;
+  height: 554px;
+	animation: revealVerticalRev 1s linear;
+	animation-delay: 0s;
+	animation-fill-mode: both;
+	clip: rect(0px,450px,0px,0px);
+	z-index: 4;
 }
 
-.apipop {
-    position: absolute;
-    width: 1024px;
-    height: 768px;
-    display: none;
-    z-index: 8;
+.s2_3 {
+	position: absolute;
+  left: 261px;
+  top: 138px;
+  width: 576px;
+  height: 40px;
+	animation: revealHorizontal 0.5s linear;
+	animation-delay: 1s;
+	animation-fill-mode: both;
+	clip: rect(0px,0px,300px,0px);
+	z-index: 3;
 }
 
-.apiclose {
-    position: absolute;
-    width: 1024px;
-    height: 768px;
-    display: none;
-    z-index: 12;
+.s2_4 {
+	position: absolute;
+  left: 594px;
+  top: 147px;
+  width: 260px;
+  height: 105px;
+	animation: flashOut 0.1s 2;
+	animation-delay: 1.5s;
+	animation-fill-mode: backwards;
+	z-index: 2;
+}
+
+.s2_5 {
+	position: absolute;
+  left: 492px;
+  top: 300px;
+  width: 487px;
+  height: 413px;
+	animation: fadeInUp 0.5s;
+	animation-delay: 2s;
+	animation-fill-mode: both;
+	z-index: 2;
+}
+
+.s2_6 {
+	position: absolute;
+  left: 593px;
+  top: 394px;
+  width: 285px;
+  height: 48px;
+	animation: flashLong 2s infinite;
+	animation-delay: 2.5s;
+	animation-fill-mode: both;
+	z-index: 2;
+}
+
+.s2_7 {
+	position: absolute;
+  left: 631px;
+  top: 617px;
+  width: 210px;
+  height: 45px;
+	animation: flashLong 2s infinite;
+	animation-delay: 3s;
+	animation-fill-mode: both;
+	z-index: 2;
+}
+
+.s2_8 {
+	position: absolute;
+  left: 955px;
+  top: 224px;
+  width: 57px;
+  height: 85px;
+	animation: heartBeat 2s infinite;
+	animation-delay: 5.5s;
+	animation-fill-mode: both;
+	z-index: 2;
+}
+
+.takeCover {
+	position: absolute;
+  left: 0px;
+  top: 639px;
+  width: 76px;
+  height: 54px;
+	z-index: 10;
+}
+
+.hit_1, .hit_2  {
+  position: absolute;
+  width: 1024px;
+  height: 768px;
+  display: none;
+  z-index: 15;
+}
+
+.hit_pop1 {
+	position: absolute;
+  left: 76px;
+  top: 444px;
+  width: 140px;
+  height: 186px;
+	z-index: 10;
+}
+
+.hit_pop2 {
+	position: absolute;
+  left: 223px;
+  top: 505px;
+  width: 140px;
+  height: 186px;
+	z-index: 10;
+}
+
+.hit_close1 {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	display: none;
+	z-index: 20;
 }
 
 
+@keyframes flashLong {
+  0%,  100% {
+    opacity: 0;
+  }
+
+  25%, 50%, 75% {
+    opacity: 1;
+  }
+}
 
 
+@keyframes flashOut {
+  0%, 50%, 100% {
+    opacity: 0;
+  }
+
+  25%, 75% {
+    opacity: 1;
+  }
+}
+
+@keyframes revealHorizontal {
+  0% {
+    clip: rect(0px,0px,600px,0px);
+	opacity: 1;
+  }
+  
+  100% {
+    clip: rect(0px,450px,600px,0px);
+	opacity: 1;
+  }
+}
 
 
+@keyframes revealVertical {
+  0% {
+    clip: rect(0px,450px,0px,0px);
+	opacity: 1;
+  }
+  
+  100% {
+    clip: rect(0px,450px,600px,0px);
+	opacity: 1;
+  }
+}
+
+@keyframes revealVerticalRev {
+  0% {
+    clip: rect(600px,450px,600px,0px);
+  }
+  
+  100% {
+    clip: rect(0px,450px,600px,0px);
+  }
+}
+
+
+@keyframes flipInXFlash {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 5deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 5deg);
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -1deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -1deg);
+  }
+
+  to {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+	opacity: 1;
+  }
+	70%, 80%, 90% {opacity: 0;}
+	65%, 75%, 85%, 95% {opacity: 1;}
+}

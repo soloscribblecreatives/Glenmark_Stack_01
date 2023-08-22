@@ -1,0 +1,182 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+.background {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	z-index: 1;
+}
+
+.s5_1 {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	z-index: 1;
+}
+
+.s5_2 {
+	position: absolute;
+  left: 37px;
+  top: 38px;
+  width: 142px;
+  height: 126px;
+  	animation: pulse 0.5s infinite;
+	animation-delay: 0s;
+	animation-fill-mode: both;
+	z-index: 2;
+}
+
+.s5_3 {
+	position: absolute;
+  left: 253px;
+  top: 428px;
+  width: 74px;
+  height: 144px;
+	animation: revealVertical 0.5s linear;
+	animation-delay: 0s;
+	animation-fill-mode: both;
+	clip: rect(0px,80px,0px,0px);
+	z-index: 4;
+}
+
+.s5_4 {
+	position: absolute;
+  left: 594px;
+  top: 429px;
+  width: 58px;
+  height: 83px;
+	animation: revealVertical 0.5s linear;
+	animation-delay: 0.5s;
+	animation-fill-mode: both;
+	clip: rect(0px,80px,0px,0px);
+	z-index: 6;
+}
+
+.s5_5 {
+	position: absolute;
+  left: 845px;
+  top: 429px;
+  width: 59px;
+  height: 165px;
+	animation: revealVertical 0.5s linear;
+	animation-delay: 1s;
+	animation-fill-mode: both;
+	clip: rect(0px,80px,0px,0px);
+	z-index: 3;
+}
+
+.s5_6 {
+	position: absolute;
+  left: 216px;
+  top: 370px;
+  width: 605px;
+  height: 46px;
+	animation: flipInXFlash 1s;
+	animation-delay: 2.3s;
+	animation-fill-mode: both;
+	z-index: 2;
+}
+
+.s5_7 {
+	position: absolute;
+  left: 0px;
+  top: 496px;
+  width: 1021px;
+  height: 168px;
+	animation: revealHorizontal 3s linear;
+	animation-delay: 4s;
+	animation-fill-mode: both;
+	clip: rect(0px,0px,170px,0px);
+	z-index: 10;
+}
+
+.s5_8 {
+	position: absolute;
+  left: 955px;
+  top: 224px;
+  width: 57px;
+  height: 85px;
+	animation: heartBeat 2s infinite;
+	animation-delay: 5.5s;
+	animation-fill-mode: both;
+	z-index: 2;
+}
+
+.takeCover {
+	position: absolute;
+  left: 0px;
+  top: 639px;
+  width: 76px;
+  height: 54px;
+	z-index: 10;
+}
+
+.hit_1, .hit_2  {
+  position: absolute;
+  width: 1024px;
+  height: 768px;
+  display: none;
+  z-index: 15;
+}
+
+.hit_pop1 {
+	position: absolute;
+  left: 42px;
+  top: 368px;
+  width: 377px;
+  height: 286px;
+	z-index: 10;
+}
+
+.hit_pop2 {
+	position: absolute;
+  left: 437px;
+  top: 368px;
+  width: 547px;
+  height: 286px;
+	z-index: 10;
+}
+
+.hit_close1 {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	display: none;
+	z-index: 20;
+}
+
+
+.pdf_popup5 {
+	position: absolute;
+    left: 31px;
+    top: 35px;
+    width: 157px;
+    height: 135px;
+    z-index: 30;
+}
+
+
+@keyframes revealVertical {
+  0% {
+    clip: rect(0px,80px,0px,0px);
+	opacity: 1;
+  }
+  
+  100% {
+    clip: rect(0px,80px,170px,0px);
+	opacity: 1;
+  }
+}
+
+@keyframes revealVerticalRev {
+  0% {
+    clip: rect(600px,450px,600px,0px);
+  }
+  
+  100% {
+    clip: rect(0px,450px,600px,0px);
+  }
+}

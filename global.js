@@ -81,7 +81,6 @@ function touchHandler(e) {
 
 	});
 
-	
 	$(".reference").removeClass("active");
 
 	$('.reference').on('swipeleft swiperight', function(event) {
@@ -199,7 +198,7 @@ if (typeof(localStorage.getItem('currentslide'))!='undefined' && localStorage.ge
 	
  } 
  
-	if(nextSlideNo <= 3){//number 3 is number of total slides present
+	if(nextSlideNo <= 11){//number 3 is number of total slides present
 	// alert(nextSlideNo);
 	var tempNext = localStorage.getItem(currentContentId+"_"+contentName+"_slideNo_"+nextSlideNo);
 
@@ -303,10 +302,10 @@ if(direction == 'b') {
 //custom slide changes ends here....
 
 	else{
-	if(page_id <= 2){
+	if(page_id <= 11){
 		page_id = page_id + 1;
 		//alert(page_id);
-		if(page_id == 3){
+		if(page_id == 12){
             flag=1;
         }
 	}
@@ -333,10 +332,8 @@ $("#wrapper").attr("rel",page_id);
 var content="";
 if(flag==0){
 var pg_content = set_pg_content(page_id);
-	$("#main_content").hide();
+
 	$("#main_content").html(pg_content);
-	$("#main_content").fadeIn();
-	
 }
 	//console.log("pg : "+page_id);
 	if(page_id==4){
@@ -366,23 +363,6 @@ var pg_content = set_pg_content(page_id);
 	 checkClickThrough();
 }
 
-$(document).on("click",".homebtn" , function (event) {
-         open_page("",1);
-        });
-
-$(document).on("click",".c1ose1" , function (event) {
-         open_page("",2);
-        });
-
-$(document).on("click",".c1ose2" , function (event) {
-         open_page("",2);
-        });
-
-
-
-
-
-
 function set_pg_content(pg_id){
 //step 6:-
 //console.log("++++++++pg_id++++"+pg_id+"+++++++currentslide++++++"+localStorage.getItem("currentslide")+"++++++previousslide++++++"+localStorage.getItem("previousslide"));
@@ -404,16 +384,40 @@ $(".reference").removeClass("active");
 currentSlide();
 var selectedContentPath='';
 switch(pg_id){
+	
 	case 1:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide1/1.jpg" width="1024" height="768" alt=""></div><div class="s2" onclick="pop1()"></div><div class="pop_up1"><img src="slide1/pop1.png" width="1024" height="768" alt=""></div><div class="nextpop" onclick="nextpop()"></div><div class="c1ose1"></div><div class="pop_up2"><img src="slide1/pop2.png" width="1024" height="768" alt=""></div><div class="prevpop" onclick="prevpop()"></div><div class="c1ose2"></div><div class="refpop"><img src="slide1/refpop.png" width="1024" height="768" alt=""></div><div class="refclose" onclick="refclose()"></div><div class="apipop"><img src="slide1/apipop.png" width="1024" height="768" alt=""></div><div class="apiclose" onclick="apiclose()"></div><div class="homebtn"></div><div class="refbtn" onclick="refbtn()"></div><div class="apibtn" onclick="apibtn()"></div>';
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="s1_1"><img src="slide1/s1_1.png" width="1024" height="768"/></div><div class="s1_2"><img src="slide1/s1_2.png"/></div><div class="s1_2_1"><img src="slide1/s1_2_1.png"/></div><div class="s1_3"><img src="slide1/s1_3.png"/></div><div class="s1_4"><img src="slide1/s1_4.png"/></div></div><div class="s1_5"><img src="slide1/s1_5.png"/></div><div class="s1_6"><img src="slide1/s1_6.png"/></div><div class="s1_7"><img src="slide1/s1_7.png"/></div><div class="s1_8"><img src="slide1/s1_8.png"/></div>';
 	break;
 	case 2:
-	content='<link rel="stylesheet" type="text/css" href="slide2/slide2.css" media="screen"/><div class="background"><img src="slide2/1.jpg" width="1024" height="768" alt=""></div><div class="refpop"><img src="slide2/refpop.png" width="1024" height="768" alt=""></div><div class="refclose" onclick="refclose()"></div><div class="apipop"><img src="slide2/apipop.png" width="1024" height="768" alt=""></div><div class="apiclose" onclick="apiclose()"></div><div class="homebtn"></div><div class="refbtn" onclick="refbtn()"></div><div class="apibtn" onclick="apibtn()"></div>';
-	break;	
+	content='<link rel="stylesheet" type="text/css" href="slide2/slide2.css" media="screen"/><div class="s2_1"><img src="slide2/s2_1.png" width="1024" height="768"/></div><div class="s2_2"><img src="slide2/s2_2.png"/></div><div class="s2_3"><img src="slide2/s2_3.png"/></div><div class="s2_4"><img src="slide2/s2_4.png"/></div></div><div class="s2_5"><img src="slide2/s2_5.png"/></div><div class="s2_6"><img src="slide2/s2_6.png"/></div><div class="s2_7"><img src="slide2/s2_7.png"/></div>';
+	break;
 	case 3:
-	content='<link rel="stylesheet" type="text/css" href="slide3/slide3.css" media="screen"/><div class="background"><img src="slide3/1.jpg" width="1024" height="768" alt=""></div><div class="refpop"><img src="slide3/refpop.png" width="1024" height="768" alt=""></div><div class="refclose" onclick="refclose()"></div><div class="apipop"><img src="slide3/apipop.png" width="1024" height="768" alt=""></div><div class="apiclose" onclick="apiclose()"></div><div class="homebtn"></div><div class="refbtn" onclick="refbtn()"></div><div class="apibtn" onclick="apibtn()"></div>';
-	break;	
-	
+	content='<link rel="stylesheet" type="text/css" href="slide3/slide3.css" media="screen"/><div class="s3_1"><img src="slide3/s3_1.png" width="1024" height="768"/></div><div class="s3_2"><img src="slide3/s3_2.png"/></div><div class="s3_3"><img id="s3_3" src="slide3/s3_3.png"/></div><div class="s3_4"><img src="slide3/s3_4.png"/></div></div><div class="s3_5"><img src="slide3/s3_5.png"/></div><div class="s3_6"><img src="slide3/s3_6.gif"/></div><div class="s3_7"><img src="slide3/s3_7.png"/></div>';
+	break;
+	case 4:
+	content='<link rel="stylesheet" type="text/css" href="slide4/slide4.css" media="screen"/><div class="s4_1"><img src="slide4/s4_1.png" width="1024" height="768"/></div><div class="s4_2"><img src="slide4/s4_2.png"/></div><div class="s4_3"><img id="s4_3" src="slide4/s4_3.png"/></div><div class="s4_4"><img src="slide4/s4_4.png"/></div><div class="pdf_popup4" onClick="showDiv4();"></div><div class="hit_1"><img src="slide4/Graph1.png" width="1024" height="768" alt=""/></div><div class="hit_pop1" onclick="hit_pop1()"></div><div class="hit_close1" onclick="hit_close1()"></div>';
+	break;
+	case 5:
+	content='<link rel="stylesheet" type="text/css" href="slide5/slide5.css" media="screen"/><div class="s5_1"><img src="slide5/s5_1.png" width="1024" height="768"/></div><div class="s5_2"><img src="slide5/s5_2.png"/></div><div class="s5_3"><img id="s5_3" src="slide5/s5_3.png"/></div><div class="s5_4"><img src="slide5/s5_4.png"/></div></div><div class="s5_5"><img src="slide5/s5_5.png"/></div><div class="pdf_popup5" onClick="showDiv5();"></div><div class="hit_1"><img src="slide5/Graph1.png" width="1024" height="768" alt=""/></div><div class="hit_pop1" onclick="hit_pop1()"></div><div class="hit_2"><img src="slide5/Graph2.png" width="1024" height="768" alt=""/></div><div class="hit_pop2" onclick="hit_pop2()"></div><div class="hit_close1" onclick="hit_close1()"></div>';
+	break;
+	case 6:
+	content='<link rel="stylesheet" type="text/css" href="slide6/slide6.css" media="screen"/><div class="s6_1"><img src="slide6/s6_1.png" width="1024" height="768"/></div><div class="s6_2"><img src="slide6/s6_2.png"/></div><div class="s6_3"><img id="s6_3" src="slide6/s6_3.png"/></div><div class="s6_4"><img src="slide6/s6_4.png"/></div><div class="pdf_popup6" onClick="showDiv6();"></div><div class="hit_1"><img src="slide6/Graph1.png" width="1024" height="768" alt=""/></div><div class="hit_pop1" onclick="hit_pop1()"></div><div class="hit_close1" onclick="hit_close1()"></div>';
+	break;
+	case 7:
+	content='<link rel="stylesheet" type="text/css" href="slide7/slide7.css" media="screen"/><div class="s7_1"><img src="slide7/s7_1.png" width="1024" height="768"/></div><div class="s7_2"><img src="slide7/s7_2.png"/></div><div class="s7_3"><img id="s7_3" src="slide7/s7_3.png"/></div><div class="s7_4"><img src="slide7/s7_4.png"/></div><div class="pdf_popup7" onClick="showDiv7();"></div><div class="hit_1"><img src="slide7/Graph1.png" width="1024" height="768" alt=""/></div><div class="hit_pop1" onclick="hit_pop1()"></div><div class="hit_2"><img src="slide7/Graph2.png" width="1024" height="768" alt=""/></div><div class="hit_pop2" onclick="hit_pop2()"></div><div class="hit_close1" onclick="hit_close1()"></div>';
+	break;
+	case 8:
+	content='<link rel="stylesheet" type="text/css" href="slide8/slide8.css" media="screen"/><div class="s8_1"><img src="slide8/s8_1.png" width="1024" height="768"/></div><div class="s8_2"><img src="slide8/s8_2.png"/></div><div class="s8_3"><img src="slide8/s8_3.png"/></div><div class="s8_4"><img src="slide8/s8_4.png"/></div></div><div class="s8_5"><img src="slide8/s8_5.png"/></div><div class="s8_6"><img src="slide8/s8_6.png"/></div><div class="s8_7"><img src="slide8/s8_7.png"/></div><div class="s8_8"><img src="slide8/s8_8.png"/></div><div class="pdf_popup8" onClick="showDiv8();"></div>';
+	break;
+	case 9:
+	content='<link rel="stylesheet" type="text/css" href="slide9/slide9.css" media="screen"/><div class="s9_1"><img src="slide9/s9_1.png" width="1024" height="768"/></div><div class="s9_2"><img src="slide9/s9_2.png"/></div><div class="s9_3"><img src="slide9/s9_3.png"/></div><div class="hit_1"><img src="slide9/Graph1.png" width="1024" height="768" alt=""/></div><div class="hit_pop1" onclick="hit_pop1()"></div><div class="hit_close1" onclick="hit_close1()"></div>';
+	break;
+	case 10:
+	content='<link rel="stylesheet" type="text/css" href="slide10/slide10.css" media="screen"/><div class="s10_1"><img src="slide10/s10_1.png" width="1024" height="768"/></div><div class="s10_2"><img src="slide10/s10_2.png"/></div><div class="s10_3"><img src="slide10/s10_3.png"/></div><div class="pdf_popup10" onClick="showDiv10();"></div><div class="hit_1"><img src="slide10/Graph1.png" width="1024" height="768" alt=""/></div><div class="hit_pop1" onclick="hit_pop1()"></div><div class="hit_close1" onclick="hit_close1()"></div>';
+	break;
+	case 11:
+	content='<link rel="stylesheet" type="text/css" href="slide11/slide11.css" media="screen"/><div class="s11_1"><img src="slide11/s11_1.png" width="1024" height="768"/></div><div class="s11_2"><img src="slide11/s11_2.png"/></div><div class="s11_3"><img src="slide11/s11_3.png"/></div><div class="pdf_popup11" onClick="showDiv11();"></div><div class="hit_1"><img src="slide11/Graph1.png" width="1024" height="768" alt=""/></div><div class="hit_pop1" onclick="hit_pop1()"></div><div class="hit_close1" onclick="hit_close1()"></div>';
+	break;
 }
 
 return content;
@@ -427,6 +431,51 @@ function showDiv2() {
    document.getElementById('welcomeDiv2').style.display = "block";
 }
 
+//***++*** pdf open functions START
+function showDiv4()
+{
+	console.log("open pdf function");
+	//path = '/'+currentContentId+'/html/pdf/REMIT_GV_JDBT.pdf';
+	path =  '/'+contentName+'/'+currentContentId+'/html/pdf/REMIT_GV_JDBT.pdf';
+	window.location = "js-call:" + "1" + ":" + encodeURIComponent(JSON.stringify({query:path, type:'sendPath', callback:'openPDF'}));
+}
+function showDiv5()
+{
+	console.log("open pdf function");
+	path =  '/'+contentName+'/'+currentContentId+'/html/pdf/Phase_3_Remogliflozin.pdf';
+	window.location = "js-call:" + "1" + ":" + encodeURIComponent(JSON.stringify({query:path, type:'sendPath', callback:'openPDF'}));
+}
+function showDiv6()
+{
+	console.log("open pdf function");
+	path =  '/'+contentName+'/'+currentContentId+'/html/pdf/Remit_HF_Interim_Analysis_Revised.pdf';
+	window.location = "js-call:" + "1" + ":" + encodeURIComponent(JSON.stringify({query:path, type:'sendPath', callback:'openPDF'}));
+}
+function showDiv7()
+{
+	console.log("open pdf function");
+	path =  '/'+contentName+'/'+currentContentId+'/html/pdf/Remit_HF_Interim_Analysis_Revised.pdf';
+	window.location = "js-call:" + "1" + ":" + encodeURIComponent(JSON.stringify({query:path, type:'sendPath', callback:'openPDF'}));
+}
+function showDiv8()
+{
+	console.log("open pdf function");
+	path =  '/'+contentName+'/'+currentContentId+'/html/pdf/ADA_Abstract_Forever_Study.pdf';
+	window.location = "js-call:" + "1" + ":" + encodeURIComponent(JSON.stringify({query:path, type:'sendPath', callback:'openPDF'}));
+}
+function showDiv10()
+{
+	console.log("open pdf function");
+	path =  '/'+contentName+'/'+currentContentId+'/html/pdf/Inspire_Study.pdf';
+	window.location = "js-call:" + "1" + ":" + encodeURIComponent(JSON.stringify({query:path, type:'sendPath', callback:'openPDF'}));
+}
+function showDiv11()
+{
+	console.log("open pdf function");
+	path =  '/'+contentName+'/'+currentContentId+'/html/pdf/ADA_Abstract_Forever_Study.pdf';
+	window.location = "js-call:" + "1" + ":" + encodeURIComponent(JSON.stringify({query:path, type:'sendPath', callback:'openPDF'}));
+}
+//***++*** pdf open functions END
 
 function open_page(url,page_id){
 	 // alert(page_id);
@@ -553,84 +602,27 @@ $(document).ready(function(){
 //alert('hi')
 		$('.touchbtn').css("display","block");
 	})
-	
-	
-	
-	
 })
+
 
 /*--------------------- animation javascript -----------------------*/
 
-function pop1() {
-	$('.pop_up1').css("display","block");
-	$('.pop1').css("display","none");
-	$('.nextpop').css("display","block");
-	$('.c1ose1').css("display","block");
+function hit_pop1() {
+	$('.hit_1').css("display","block");
+	$('.hit_close1').css("display","block");
+	$('.hit_pop1').css("display","none");
 }
 
-function close1() {
-	$('.pop_up1').css("display","none");
-	$('.pop1').css("display","block");
-	$('.c1ose1').css("display","none");
-	$('.nextpop').css("display","none");
+function hit_pop2() {
+	$('.hit_2').css("display","block");
+	$('.hit_close1').css("display","block");
+	$('.hit_pop2').css("display","none");
 }
 
-function nextpop() {
-	$('.pop_up2').css("display","block");
-	$('.pop_up1').css("display","none");
-	$('.pop2').css("display","none");
-	$('.pop1').css("display","none");
-	$('.c1ose2').css("display","block");
-	$('.c1ose1').css("display","none");
+function hit_close1() {
+	$('.hit_1').css("display","none");
+	$('.hit_2').css("display","none");
+	$('.hit_pop1').css("display","block");
+	$('.hit_pop2').css("display","block");
+	$('.hit_close1').css("display","none");
 }
-
-function prevpop() {
-	$('.pop_up2').css("display","none");
-	$('.pop_up1').css("display","block");
-	$('.pop2').css("display","none");
-	$('.pop1').css("display","block");
-	$('.c1ose2').css("display","none");
-	$('.c1ose1').css("display","block");
-}
-
-function close2() {
-	$('.pop_up2').css("display","none");
-	$('.pop_up1').css("display","none");
-	$('.pop2').css("display","none");
-	$('.pop1').css("display","none");
-	$('.c1ose2').css("display","none");
-	$('.c1ose1').css("display","none");
-}
-
-function apibtn() {
-	$(".apipop").fadeIn();
-	$('.api').css("display","none");
-	$('.apiclose').css("display","block");
-}
-
-function apiclose() {
-	$(".apipop").fadeOut();
-	$('.api').css("display","block");
-	$('.apiclose').css("display","none");
-}
-
-function refbtn() {
-	$(".refpop").fadeIn();
-	$('.ref').css("display","none");
-	$('.refclose').css("display","block");
-}
-
-function refclose() {
-	$(".refpop").fadeOut();
-	$('.ref').css("display","block");
-	$('.refclose').css("display","none");
-}
-
-
-
-
-
-
-
-
-
