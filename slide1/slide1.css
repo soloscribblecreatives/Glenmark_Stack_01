@@ -55,3 +55,43 @@
 	display: none;
 	z-index: 50;
 }
+
+
+.click {
+	position: absolute;
+  left: 833px;
+  top: 630px;
+  width: 90px;
+  height: 93px;
+	animation: heartBeatSoft 2s infinite;
+	animation-delay: 0s;
+	animation-fill-mode: both;
+}
+
+
+@keyframes heartBeatSoft {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  14% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  28% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  42% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  70% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
