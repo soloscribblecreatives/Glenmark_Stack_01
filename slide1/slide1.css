@@ -56,11 +56,37 @@
 	z-index: 50;
 }
 
+.video4 {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	display: none;
+	z-index:15;
+}
 
-.click {
+.button4 {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	display: none;
+	z-index: 50;
+}
+
+.click1 {
 	position: absolute;
   left: 833px;
   top: 630px;
+  width: 90px;
+  height: 93px;
+	animation: heartBeatSoft 2s infinite;
+	animation-delay: 0s;
+	animation-fill-mode: both;
+}
+
+.click2 {
+	position: absolute;
+  left: 674px;
+  top: 622px;
   width: 90px;
   height: 93px;
 	animation: heartBeatSoft 2s infinite;

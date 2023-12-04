@@ -347,7 +347,7 @@ currentSlide();
 var selectedContentPath='';
 switch(pg_id){
 	case 1:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="video1"><video autoplay poster="slide1/Poster.png" onplay="onPlay()" onended="onEnded1()" id="startVideo" width="1024" height="768"><source src="slide1/Part1.mp4" type="video/mp4"></video></div><div class="video2"><video onended="onEnded2()" id="midVideo" width="1024" height="768"><source src="slide1/Part2.mp4" type="video/mp4"></video></div><div class="video3"><video id="endVideo" width="1024" height="768"><source src="slide1/Part3.mp4" type="video/mp4"></video></div><div class="button1" onclick="playVid1()"></div><div class="button2" onclick="playVid2()"><img class="click" src="slide1/Click.png"></div><div class="button3" onclick="playVid3()"><img class="click" src="slide1/Click.png"></div>';
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="video1"><video autoplay poster="slide1/Poster.png" onplay="onPlay()" onended="onEnded1()" id="startVideo" width="1024" height="768"><source src="slide1/Part1.mp4" type="video/mp4"></video></div><div class="video2"><video onended="onEnded2()" id="midVideo" width="1024" height="768"><source src="slide1/Part2.mp4" type="video/mp4"></video></div><div class="video3"><video onended="onEnded3()" id="tidVideo" width="1024" height="768"><source src="slide1/Part3.mp4" type="video/mp4"></video></div><div class="video4"><video id="endVideo" width="1024" height="768"><source src="slide1/Part4.mp4" type="video/mp4"></video></div><div class="button1" onclick="playVid1()"></div><div class="button2" onclick="playVid2()"><img class="click1" src="slide1/Click.png"></div><div class="button3" onclick="playVid3()"><img class="click2" src="slide1/Click.png"></div><div class="button4" onclick="playVid4()"><img class="click2" src="slide1/Click.png"></div>';
 	break;
 
 }
@@ -530,5 +530,21 @@ function playVid3() {
 	vid.pause();
 	vid.currentTime = 0;
 	$(".video3").css("display","block");
+	document.getElementById("tidVideo").play();
+}
+
+function onEnded3() {
+	$('.button3').css("display","none");
+	$('.button4').css("display","block");
+}
+
+function playVid4() {
+	$('.button3').css("display","none");
+	$('.button4').css("display","none");
+	$(".video3").css("display","none");
+	var vid = document.getElementById("tidVideo");
+	vid.pause();
+	vid.currentTime = 0;
+	$(".video4").css("display","block");
 	document.getElementById("endVideo").play();
 }
