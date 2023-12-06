@@ -72,6 +72,22 @@
 	z-index: 50;
 }
 
+.video5 {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	display: none;
+	z-index:15;
+}
+
+.button5 {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	display: none;
+	z-index: 50;
+}
+
 .click1 {
 	position: absolute;
   left: 833px;
