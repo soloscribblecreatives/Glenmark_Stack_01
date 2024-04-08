@@ -32,7 +32,7 @@
   top: 258px;
   width: 1024px;
   height: 119px;
-	animation: revealHorizontal 20s;
+	animation: revealHorizontal 5s;
 	animation-delay: 0.5s;
 	animation-fill-mode: both;
 	clip: rect(0px,0px,130px,0px);
@@ -53,10 +53,10 @@
 
 .takeCover {
 	position: absolute;
-  left: 0px;
-  top: 639px;
-  width: 76px;
-  height: 54px;
+  left: 809px;
+  top: 674px;
+  width: 51px;
+  height: 94px;
 	z-index: 10;
 }
 
@@ -70,10 +70,10 @@
 
 .hit_pop1 {
 	position: absolute;
-  left: 859px;
-  top: 658px;
-  width: 111px;
-  height: 110px;
+  left: 863px;
+  top: 674px;
+  width: 51px;
+  height: 94px;
 	z-index: 10;
 }
 

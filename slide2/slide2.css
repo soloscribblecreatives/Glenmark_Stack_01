@@ -31,32 +31,68 @@
   left: 0px;
   top: 93px;
   width: 1024px;
-  height: 675px;
-	animation: revealHorizontal 20s;
+  height: 283px;
+	animation: revealHorizontal 5s;
 	animation-delay: 0.5s;
 	animation-fill-mode: both;
-	clip: rect(0px,0px,700px,0px);
+	clip: rect(0px,0px,300px,0px);
 	z-index: 3;
+}
+
+.s1_4 {
+	position: absolute;
+  left: 119px;
+  top: 217px;
+  width: 51px;
+  height: 56px;
+	animation: bounceIn 1s;
+	animation-delay: 1s;
+	animation-fill-mode: both;
+	z-index: 10;
+}
+
+.s1_5 {
+	position: absolute;
+  left: 351px;
+  top: 195px;
+  width: 35px;
+  height: 42px;
+	animation: bounceIn 1s;
+	animation-delay: 1.5s;
+	animation-fill-mode: both;
+	z-index: 10;
+}
+
+.s1_6 {
+	position: absolute;
+  left: 884px;
+  top: 214px;
+  width: 27px;
+  height: 44px;
+	animation: bounceIn 1s;
+	animation-delay: 3.5s;
+	animation-fill-mode: both;
+	z-index: 10;
 }
 
 @keyframes revealHorizontal {
   0% {
-    clip: rect(0px,0px,700px,0px);
+    clip: rect(0px,0px,300px,0px);
 	opacity: 1;
   }
   
   100% {
-    clip: rect(0px,1024px,700px,0px);
+    clip: rect(0px,1024px,300px,0px);
 	opacity: 1;
   }
 }
 
 .takeCover {
 	position: absolute;
-  left: 0px;
-  top: 639px;
-  width: 76px;
-  height: 54px;
+  left: 809px;
+  top: 674px;
+  width: 51px;
+  height: 94px;
 	z-index: 10;
 }
 
@@ -70,10 +106,10 @@
 
 .hit_pop1 {
 	position: absolute;
-  left: 859px;
-  top: 658px;
-  width: 111px;
-  height: 110px;
+  left: 863px;
+  top: 674px;
+  width: 51px;
+  height: 94px;
 	z-index: 10;
 }
 
