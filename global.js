@@ -347,7 +347,7 @@ currentSlide();
 var selectedContentPath='';
 switch(pg_id){
 	case 1:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"></div><div class="button1" onclick="playVid1()"></div><div class="video1"><video autoplay onended="myFunction()" poster="slide1/Poster.png" id="startVideo" width="1024" height="768"><source src="slide1/Part1.mp4" type="video/mp4"></video></div><div class="button2" onclick="playVid2()"></div><div class="video2"><video id="endVideo" width="1024" height="768"><source src="slide1/Part2.mp4" type="video/mp4"></video></div>';
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="s1" onclick="s1()"><img src="slide1/s1.png" width="1024" height="768" alt=""/></div><div class="s2"><img src="slide1/s2.png"/></div><div class="s3"><img src="slide1/s3.png"/></div><div class="s4"><img src="slide1/s4.png"/></div><div class="s5"><img src="slide1/s5.png"/></div><div class="s6" onclick="s6()"><img src="slide1/s6.png"/></div><div class="s7" onclick="s7()"><img src="slide1/s7.png"/></div><div class="s8" onclick="s8()"><img src="slide1/s8.png"/></div><div class="s9" onclick="s9()"><img src="slide1/s9.png"/></div><div class="s2s" onclick="s2()"></div><div class="s3s" onclick="s3()"></div><div class="s4s" onclick="s4()"></div><div class="s5s" onclick="s5()"></div>';
 	break;
 
 }
@@ -490,23 +490,395 @@ $(document).ready(function(){
 	})
 })
 
-/*--------------------------Javascript Animation-----------------------------*/
+/*--------------------- animation javascript -----------------------*/
 
-function playVid1() {
-	document.getElementById("startVideo").play();
+function s2() {
+	$(".s2").addClass("yes");
+	$(".s3,.s4,.s5").removeClass("yes");
+	
+	if ($(".s2").hasClass("no")){
+		$(".s2").removeClass("yes");
+	}
+	
+	if ($(".s2").hasClass("yes") && $(".s6").hasClass("yes")){
+		setTimeout(function(){
+			$(".s6").addClass("s6s2");
+			$(".s2").addClass("no");
+			$(".s3s,.s4s,.s5s").css("display","block");
+			$(".s2s").css("display","none");
+			$(".s2,.s6").removeClass("yes");
+		}, 1000);
+	}
+	
+	else if ($(".s2").hasClass("yes") && $(".s7").hasClass("yes")){
+		setTimeout(function(){
+			$(".s7").addClass("s7s2");
+			$(".s2").addClass("no");
+			$(".s3s,.s4s,.s5s").css("display","block");
+			$(".s2s").css("display","none");
+			$(".s2,.s7").removeClass("yes");
+		}, 1000);
+	}
+	
+	else if ($(".s2").hasClass("yes") && $(".s8").hasClass("yes")){
+		setTimeout(function(){
+			$(".s8").addClass("s8s2");
+			$(".s2").addClass("no");
+			$(".s3s,.s4s,.s5s").css("display","block");
+			$(".s2s").css("display","none");
+			$(".s2,.s8").removeClass("yes");
+		}, 1000);
+	}
+	
+	else if ($(".s2").hasClass("yes") && $(".s9").hasClass("yes")){
+		setTimeout(function(){
+			$(".s9").addClass("s9s2");
+			$(".s2").addClass("no");
+			$(".s3s,.s4s,.s5s").css("display","block");
+			$(".s2s").css("display","none");
+			$(".s2, .s9").removeClass("yes");
+		}, 1000);
+	}
 }
 
-function myFunction() {
-	$('.button1').css("display","none");
-	$('.button2').css("display","block");
-};
+function s3() {
+	$(".s3").addClass("yes");
+	$(".s2,.s4,.s5").removeClass("yes");
+	
+	if ($(".s3").hasClass("no")){
+		$(".s3").removeClass("yes");
+	}
+	
+	if ($(".s3").hasClass("yes") && $(".s6").hasClass("yes")){
+		setTimeout(function(){
+			$(".s6").addClass("s6s3");
+			$(".s3").addClass("no");
+			$(".s2s,.s4s,.s5s").css("display","block");
+			$(".s3s").css("display","none");
+			$(".s3, .s6").removeClass("yes");
+		}, 1000);
+	}
+	
+	else if ($(".s3").hasClass("yes") && $(".s7").hasClass("yes")){
+		setTimeout(function(){
+			$(".s7").addClass("s7s3");
+			$(".s3").addClass("no");
+			$(".s2s,.s4s,.s5s").css("display","block");
+			$(".s3s").css("display","none");
+			$(".s3, .s7").removeClass("yes");
+		}, 1000);
+	}
+	
+	else if ($(".s3").hasClass("yes") && $(".s8").hasClass("yes")){
+		setTimeout(function(){
+			$(".s8").addClass("s8s3");
+			$(".s3").addClass("no");
+			$(".s2s,.s4s,.s5s").css("display","block");
+			$(".s3s").css("display","none");
+			$(".s3, .s8").removeClass("yes");
+		}, 1000);
+	}
+	
+	else if ($(".s3").hasClass("yes") && $(".s9").hasClass("yes")){
+		setTimeout(function(){
+			$(".s9").addClass("s9s3");
+			$(".s2s,.s4s,.s5s").css("display","block");
+			$(".s3s").css("display","none");
+			$(".s3, .s9").removeClass("yes");
+		}, 1000);
+	}
+}
 
-function playVid2() {
-	$('.button2').css("display","none");
-	$(".video1").css("display","none");
-	var vid = document.getElementById("startVideo");
-	vid.pause();
-	vid.currentTime = 0;
-	$(".video2").css("display","block");
-	document.getElementById("endVideo").play();
-};
+function s4() {
+	$(".s4").addClass("yes");
+	$(".s3,.s2,.s5").removeClass("yes");
+	
+	if ($(".s4").hasClass("no")){
+		$(".s4").removeClass("yes");
+	}
+	
+	if ($(".s4").hasClass("yes") && $(".s6").hasClass("yes")){
+		setTimeout(function(){
+			$(".s6").addClass("s6s4");
+			$(".s4").addClass("no");
+			$(".s2s,.s3s,.s5s").css("display","block");
+			$(".s4s").css("display","none");
+			$(".s4, .s6").removeClass("yes");
+		}, 1000);
+	}
+	
+	else if ($(".s4").hasClass("yes") && $(".s7").hasClass("yes")){
+		setTimeout(function(){
+			$(".s7").addClass("s7s4");
+			$(".s4").addClass("no");
+			$(".s2s,.s3s,.s5s").css("display","block");
+			$(".s4s").css("display","none");
+			$(".s4, .s7").removeClass("yes");
+		}, 1000);
+	}
+	
+	else if ($(".s4").hasClass("yes") && $(".s8").hasClass("yes")){
+		setTimeout(function(){
+			$(".s8").addClass("s8s4");
+			$(".s4").addClass("no");
+			$(".s2s,.s3s,.s5s").css("display","block");
+			$(".s4s").css("display","none");
+			$(".s4, .s8").removeClass("yes");
+		}, 1000);
+	}
+	
+	else if ($(".s4").hasClass("yes") && $(".s9").hasClass("yes")){
+		setTimeout(function(){
+			$(".s9").addClass("s9s4");
+			$(".s4").addClass("no");
+			$(".s2s,.s3s,.s5s").css("display","block");
+			$(".s4s").css("display","none");
+			$(".s4, .s9").removeClass("yes");
+		}, 1000);
+	}
+}
+
+function s5() {
+	$(".s5").addClass("yes");
+	$(".s3,.s4,.s2").removeClass("yes");
+	
+	if ($(".s5").hasClass("no")){
+		$(".s5").removeClass("yes");
+	}
+	
+	if ($(".s5").hasClass("yes") && $(".s6").hasClass("yes")){
+		setTimeout(function(){
+			$(".s6").addClass("s6s5");
+			$(".s5").addClass("no");
+			$(".s2s,.s4s,.s3s").css("display","block");
+			$(".s5s").css("display","none");
+			$(".s5, .s6").removeClass("yes");
+		}, 1000);
+	}
+	
+	else if ($(".s5").hasClass("yes") && $(".s7").hasClass("yes")){
+		setTimeout(function(){
+			$(".s7").addClass("s7s5");
+			$(".s5").addClass("no");
+			$(".s2s,.s4s,.s3s").css("display","block");
+			$(".s5s").css("display","none");
+			$(".s5, .s7").removeClass("yes");
+		}, 1000);
+	}
+	
+	else if ($(".s5").hasClass("yes") && $(".s8").hasClass("yes")){
+		setTimeout(function(){
+			$(".s8").addClass("s8s5");
+			$(".s5").addClass("no");
+			$(".s2s,.s4s,.s3s").css("display","block");
+			$(".s5s").css("display","none");
+			$(".s5, .s8").removeClass("yes");
+		}, 1000);
+	}
+	
+	else if ($(".s5").hasClass("yes") && $(".s9").hasClass("yes")){
+		setTimeout(function(){
+			$(".s9").addClass("s9s5");
+			$(".s5").addClass("no");
+			$(".s2s,.s4s,.s3s").css("display","block");
+			$(".s5s").css("display","none");
+			$(".s5, .s9").removeClass("yes");
+		}, 1000);
+	}
+}
+
+function s6() {
+	$(".s6").addClass("yes");
+	$(".s7,.s8,.s9").removeClass("yes");
+	
+	if ($(".s6").hasClass("s6s2") || $(".s6").hasClass("s6s3") || $(".s6").hasClass("s6s4") || $(".s6").hasClass("s6s5")){
+		$(".s6").removeClass("yes");
+	}
+	
+	if ($(".s2").hasClass("yes") && $(".s6").hasClass("yes")){
+		setTimeout(function(){
+			$(".s6").addClass("s6s2");
+			$(".s2").addClass("no");
+			$(".s3s,.s4s,.s5s").css("display","block");
+			$(".s2s").css("display","none");
+			$(".s2,.s6").removeClass("yes");
+		}, 1000);
+	}
+	
+	else if ($(".s3").hasClass("yes") && $(".s6").hasClass("yes")){
+		setTimeout(function(){
+			$(".s6").addClass("s6s3");
+			$(".s3").addClass("no");
+			$(".s2s,.s4s,.s5s").css("display","block");
+			$(".s3s").css("display","none");
+			$(".s3,.s6").removeClass("yes");
+		}, 1000);
+	}
+	
+	else if ($(".s4").hasClass("yes") && $(".s6").hasClass("yes")){
+		setTimeout(function(){
+			$(".s6").addClass("s6s4");
+			$(".s4").addClass("no");
+			$(".s3s,.s2s,.s5s").css("display","block");
+			$(".s4s").css("display","none");
+			$(".s4,.s6").removeClass("yes");
+		}, 1000);
+	}
+	
+	else if ($(".s5").hasClass("yes") && $(".s6").hasClass("yes")){
+		setTimeout(function(){
+			$(".s6").addClass("s6s5");
+			$(".s5").addClass("no");
+			$(".s3s,.s4s,.s2s").css("display","block");
+			$(".s5s").css("display","none");
+			$(".s5,.s6").removeClass("yes");
+		}, 1000);
+	}
+}
+
+function s7() {
+	$(".s7").addClass("yes");
+	$(".s6,.s8,.s9").removeClass("yes");
+	
+	if ($(".s7").hasClass("s7s2") || $(".s7").hasClass("s7s3") || $(".s7").hasClass("s7s4") || $(".s7").hasClass("s7s5")){
+		$(".s7").removeClass("yes");
+	}
+	
+	if ($(".s2").hasClass("yes") && $(".s7").hasClass("yes")){
+		setTimeout(function(){
+			$(".s7").addClass("s7s2");
+			$(".s2").addClass("no");
+			$(".s3s,.s4s,.s5s").css("display","block");
+			$(".s2s").css("display","none");
+			$(".s2,.s7").removeClass("yes");
+		}, 1000);
+	}
+	
+	else if ($(".s3").hasClass("yes") && $(".s7").hasClass("yes")){
+		setTimeout(function(){
+			$(".s7").addClass("s7s3");
+			$(".s3").addClass("no");
+			$(".s2s,.s4s,.s5s").css("display","block");
+			$(".s3s").css("display","none");
+			$(".s3,.s7").removeClass("yes");
+		}, 1000);
+	}
+	
+	else if ($(".s4").hasClass("yes") && $(".s7").hasClass("yes")){
+		setTimeout(function(){
+			$(".s7").addClass("s7s4");
+			$(".s4").addClass("no");
+			$(".s3s,.s2s,.s5s").css("display","block");
+			$(".s4s").css("display","none");
+			$(".s4,.s7").removeClass("yes");
+		}, 1000);
+	}
+	
+	else if ($(".s5").hasClass("yes") && $(".s7").hasClass("yes")){
+		setTimeout(function(){
+			$(".s7").addClass("s7s5");
+			$(".s5").addClass("no");
+			$(".s3s,.s4s,.s2s").css("display","block");
+			$(".s5s").css("display","none");
+			$(".s5,.s7").removeClass("yes");
+		}, 1000);
+	}
+}
+
+function s8() {
+	$(".s8").addClass("yes");
+	$(".s6,.s7,.s9").removeClass("yes");
+	
+	if ($(".s8").hasClass("s8s2") || $(".s8").hasClass("s8s3") || $(".s8").hasClass("s8s4") || $(".s8").hasClass("s8s5")){
+		$(".s8").removeClass("yes");
+	}
+	
+	if ($(".s2").hasClass("yes") && $(".s8").hasClass("yes")){
+		setTimeout(function(){
+			$(".s8").addClass("s8s2");
+			$(".s2").addClass("no");
+			$(".s3s,.s4s,.s5s").css("display","block");
+			$(".s2s").css("display","none");
+			$(".s2,.s8").removeClass("yes");
+		}, 1000);
+	}
+	
+	else if ($(".s3").hasClass("yes") && $(".s8").hasClass("yes")){
+		setTimeout(function(){
+			$(".s8").addClass("s8s3");
+			$(".s3").addClass("no");
+			$(".s2s,.s4s,.s5s").css("display","block");
+			$(".s3s").css("display","none");
+			$(".s3,.s8").removeClass("yes");
+		}, 1000);
+	}
+	
+	else if ($(".s4").hasClass("yes") && $(".s8").hasClass("yes")){
+		setTimeout(function(){
+			$(".s8").addClass("s8s4");
+			$(".s4").addClass("no");
+			$(".s3s,.s2s,.s5s").css("display","block");
+			$(".s4s").css("display","none");
+			$(".s4,.s8").removeClass("yes");
+		}, 1000);
+	}
+	
+	else if ($(".s5").hasClass("yes") && $(".s8").hasClass("yes")){
+		setTimeout(function(){
+			$(".s8").addClass("s8s5");
+			$(".s5").addClass("no");
+			$(".s3s,.s4s,.s2s").css("display","block");
+			$(".s5s").css("display","none");
+			$(".s5,.s8").removeClass("yes");
+		}, 1000);
+	}
+}
+
+function s9() {
+	$(".s9").addClass("yes");
+	$(".s6,.s7,.s8").removeClass("yes");
+	
+	if ($(".s9").hasClass("s9s2") || $(".s9").hasClass("s9s3") || $(".s9").hasClass("s9s4") || $(".s9").hasClass("s9s5")){
+		$(".s9").removeClass("yes");
+	}
+	
+	if ($(".s2").hasClass("yes") && $(".s9").hasClass("yes")){
+		setTimeout(function(){
+			$(".s9").addClass("s9s2");
+			$(".s2").addClass("no");
+			$(".s3s,.s4s,.s5s").css("display","block");
+			$(".s2s").css("display","none");
+			$(".s2,.s9").removeClass("yes");
+		}, 1000);
+	}
+	
+	else if ($(".s3").hasClass("yes") && $(".s9").hasClass("yes")){
+		setTimeout(function(){
+			$(".s9").addClass("s9s3");
+			$(".s3").addClass("no");
+			$(".s2s,.s4s,.s5s").css("display","block");
+			$(".s3s").css("display","none");
+			$(".s3, .s9").removeClass("yes");
+		}, 1000);
+	}
+	
+	else if ($(".s4").hasClass("yes") && $(".s9").hasClass("yes")){
+		setTimeout(function(){
+			$(".s9").addClass("s9s4");
+			$(".s4").addClass("no");
+			$(".s3s,.s2s,.s5s").css("display","block");
+			$(".s4s").css("display","none");
+			$(".s4, .s9").removeClass("yes");
+		}, 1000);
+	}
+	
+	else if ($(".s5").hasClass("yes") && $(".s9").hasClass("yes")){
+		setTimeout(function(){
+			$(".s9").addClass("s9s5");
+			$(".s5").addClass("no");
+			$(".s3s,.s4s,.s2s").css("display","block");
+			$(".s5s").css("display","none");
+			$(".s5, .s9").removeClass("yes");
+		}, 1000);
+	}
+}

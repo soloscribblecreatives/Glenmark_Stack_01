@@ -5,7 +5,7 @@
 <meta http-equiv="cache-control" content="max-age=200"/>
 <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
 <meta http-equiv="X-UA-Compatible" content="chrome=1">
-<title>Sitazit-Dussehra</title>
+<title>Sitazit</title>
 <link rel="stylesheet" type="text/css" href="animate.css" media="screen"/>
 <link rel="stylesheet" type="text/css" href="global.css" media="screen"/>
 
@@ -29,9 +29,10 @@
     </div>
     <div class="box_btn"></div>
   </div>
+  <div id="myconsole"></div>
+  <div id="click_through"></div>
 </div>
-<div id="myconsole"></div>
-<div id="click_through" > </div>
+
 <script src="global.js" type="text/javascript" language="javascript"></script> 
 <script>
 var startTime = Date.now();
@@ -63,7 +64,7 @@ if (typeof(localStorage.getItem("currentcustomslideflag"))!='undefined' && local
 	
 	switch(custcomslideid){
 		case 1:
-		content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"></div><div class="button1" onclick="playVid1()"></div><div class="video1"><video autoplay onended="myFunction()" poster="slide1/Poster.png" id="startVideo" width="1024" height="768"><source src="slide1/Part1.mp4" type="video/mp4"></video></div><div class="button2" onclick="playVid2()"></div><div class="video2"><video id="endVideo" width="1024" height="768"><source src="slide1/Part2.mp4" type="video/mp4"></video></div>';
+		content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="s1" onclick="s1()"><img src="slide1/s1.png" width="1024" height="768" alt=""/></div><div class="s2"><img src="slide1/s2.png"/></div><div class="s3"><img src="slide1/s3.png"/></div><div class="s4"><img src="slide1/s4.png"/></div><div class="s5"><img src="slide1/s5.png"/></div><div class="s6" onclick="s6()"><img src="slide1/s6.png"/></div><div class="s7" onclick="s7()"><img src="slide1/s7.png"/></div><div class="s8" onclick="s8()"><img src="slide1/s8.png"/></div><div class="s9" onclick="s9()"><img src="slide1/s9.png"/></div><div class="s2s" onclick="s2()"></div><div class="s3s" onclick="s3()"></div><div class="s4s" onclick="s4()"></div><div class="s5s" onclick="s5()"></div>';
 		break;
 	}
 
@@ -74,8 +75,10 @@ if (typeof(localStorage.getItem("currentcustomslideflag"))!='undefined' && local
 	 
 }else{
 
-$("#main_content").html('<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"></div><div class="button1" onclick="playVid1()"></div><div class="video1"><video autoplay onended="myFunction()" poster="slide1/Poster.png" id="startVideo" width="1024" height="768"><source src="slide1/Part1.mp4" type="video/mp4"></video></div><div class="button2" onclick="playVid2()"></div><div class="video2"><video id="endVideo" width="1024" height="768"><source src="slide1/Part2.mp4" type="video/mp4"></video></div>');
+$("#main_content").html('<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="s1" onclick="s1()"><img src="slide1/s1.png" width="1024" height="768" alt=""/></div><div class="s2"><img src="slide1/s2.png"/></div><div class="s3"><img src="slide1/s3.png"/></div><div class="s4"><img src="slide1/s4.png"/></div><div class="s5"><img src="slide1/s5.png"/></div><div class="s6" onclick="s6()"><img src="slide1/s6.png"/></div><div class="s7" onclick="s7()"><img src="slide1/s7.png"/></div><div class="s8" onclick="s8()"><img src="slide1/s8.png"/></div><div class="s9" onclick="s9()"><img src="slide1/s9.png"/></div><div class="s2s" onclick="s2()"></div><div class="s3s" onclick="s3()"></div><div class="s4s" onclick="s4()"></div><div class="s5s" onclick="s5()"></div>');
+
 }
+
 });
 </script> 
 
