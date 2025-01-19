@@ -148,6 +148,45 @@
 	animation-fill-mode: both;
 }
 
+.s10 {
+	position: absolute;
+    left: 306px;
+    top: 534px;
+    width: 411px;
+    height: 150px;
+	animation: zoomIn 0.5s;
+	animation-delay: 0s;
+	animation-fill-mode: both;
+	display: none;
+	z-index: 15;
+}
+
+.s11 {
+	position: absolute;
+	left: 44px;
+	top: 681px;
+	width: 935px;
+	height: 39px;
+	animation: flipInX 0.5s;
+	animation-delay: 0.5s;
+	animation-fill-mode: both;
+	display: none;
+	z-index: 15;
+}
+
+.s12 {
+	position: absolute;
+	left: 219px;
+	top: 547px;
+	width: 578px;
+	height: 181px;
+	animation: zoomIn 0.5s;
+	animation-delay: 1s;
+	animation-fill-mode: both;
+	display: none;
+	z-index: 15;
+}
+
 
 .s6s2 {animation: s6s2 1s;animation-delay: 0s;animation-fill-mode: both;}
 @keyframes s6s2 {

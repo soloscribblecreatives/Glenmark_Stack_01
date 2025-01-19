@@ -347,7 +347,7 @@ currentSlide();
 var selectedContentPath='';
 switch(pg_id){
 	case 1:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="s1" onclick="s1()"><img src="slide1/s1.png" width="1024" height="768" alt=""/></div><div class="s2"><img src="slide1/s2.png"/></div><div class="s3"><img src="slide1/s3.png"/></div><div class="s4"><img src="slide1/s4.png"/></div><div class="s5"><img src="slide1/s5.png"/></div><div class="s6" onclick="s6()"><img src="slide1/s6.png"/></div><div class="s7" onclick="s7()"><img src="slide1/s7.png"/></div><div class="s8" onclick="s8()"><img src="slide1/s8.png"/></div><div class="s9" onclick="s9()"><img src="slide1/s9.png"/></div><div class="s2s" onclick="s2()"></div><div class="s3s" onclick="s3()"></div><div class="s4s" onclick="s4()"></div><div class="s5s" onclick="s5()"></div>';
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="s1" onclick="s1()"><img src="slide1/s1.png" width="1024" height="768" alt=""/></div><div class="s2"><img src="slide1/s2.png"/></div><div class="s3"><img src="slide1/s3.png"/></div><div class="s4"><img src="slide1/s4.png"/></div><div class="s5"><img src="slide1/s5.png"/></div><div class="s6" onclick="s6()"><img src="slide1/s6.png"/></div><div class="s7" onclick="s7()"><img src="slide1/s7.png"/></div><div class="s8" onclick="s8()"><img src="slide1/s8.png"/></div><div class="s9" onclick="s9()"><img src="slide1/s9.png"/></div><div class="s2s" onclick="s2()"></div><div class="s3s" onclick="s3()"></div><div class="s4s" onclick="s4()"></div><div class="s5s" onclick="s5()"></div><div class="s10"><img src="slide1/s10.png"/></div><div class="s11"><img src="slide1/s11.png"/></div><div class="s12"><img src="slide1/s12.png"/></div><audio source id="pick" src="slide1/pick.mp3" type="audio/mpeg"></audio><audio source id="pair" src="slide1/pair.mp3" type="audio/mpeg"></audio><audio source id="success" src="slide1/success.mp3" type="audio/mpeg"></audio><audio source id="match" src="slide1/match.mp3" type="audio/mpeg"></audio><audio source id="end" src="slide1/end.mp3" type="audio/mpeg"></audio>';
 	break;
 
 }
@@ -493,6 +493,9 @@ $(document).ready(function(){
 /*--------------------- animation javascript -----------------------*/
 
 function s2() {
+	document.getElementById("pick").play();
+	setTimeout(function(){show();}, 1200);  //time 1200 is set higher as "s6s2 etc and no" classes are added at 1000
+	//settimout is important to call the show function as it triggers "function s6()" again after other events are executed
 	$(".s2").addClass("yes");
 	$(".s3,.s4,.s5").removeClass("yes");
 	
@@ -502,6 +505,7 @@ function s2() {
 	
 	if ($(".s2").hasClass("yes") && $(".s6").hasClass("yes")){
 		setTimeout(function(){
+			document.getElementById("pair").play();
 			$(".s6").addClass("s6s2");
 			$(".s2").addClass("no");
 			$(".s3s,.s4s,.s5s").css("display","block");
@@ -512,6 +516,7 @@ function s2() {
 	
 	else if ($(".s2").hasClass("yes") && $(".s7").hasClass("yes")){
 		setTimeout(function(){
+			document.getElementById("pair").play();
 			$(".s7").addClass("s7s2");
 			$(".s2").addClass("no");
 			$(".s3s,.s4s,.s5s").css("display","block");
@@ -522,6 +527,7 @@ function s2() {
 	
 	else if ($(".s2").hasClass("yes") && $(".s8").hasClass("yes")){
 		setTimeout(function(){
+			document.getElementById("pair").play();
 			$(".s8").addClass("s8s2");
 			$(".s2").addClass("no");
 			$(".s3s,.s4s,.s5s").css("display","block");
@@ -532,6 +538,7 @@ function s2() {
 	
 	else if ($(".s2").hasClass("yes") && $(".s9").hasClass("yes")){
 		setTimeout(function(){
+			document.getElementById("pair").play();
 			$(".s9").addClass("s9s2");
 			$(".s2").addClass("no");
 			$(".s3s,.s4s,.s5s").css("display","block");
@@ -542,6 +549,9 @@ function s2() {
 }
 
 function s3() {
+	document.getElementById("pick").play();
+	setTimeout(function(){show();}, 1200);  //time 1200 is set higher as "s6s3 etc and no" classes are added at 1000
+	//settimout is important to call the show function as it triggers "function s6()" again after other events are executed
 	$(".s3").addClass("yes");
 	$(".s2,.s4,.s5").removeClass("yes");
 	
@@ -551,6 +561,7 @@ function s3() {
 	
 	if ($(".s3").hasClass("yes") && $(".s6").hasClass("yes")){
 		setTimeout(function(){
+			document.getElementById("pair").play();
 			$(".s6").addClass("s6s3");
 			$(".s3").addClass("no");
 			$(".s2s,.s4s,.s5s").css("display","block");
@@ -561,6 +572,7 @@ function s3() {
 	
 	else if ($(".s3").hasClass("yes") && $(".s7").hasClass("yes")){
 		setTimeout(function(){
+			document.getElementById("pair").play();
 			$(".s7").addClass("s7s3");
 			$(".s3").addClass("no");
 			$(".s2s,.s4s,.s5s").css("display","block");
@@ -571,6 +583,7 @@ function s3() {
 	
 	else if ($(".s3").hasClass("yes") && $(".s8").hasClass("yes")){
 		setTimeout(function(){
+			document.getElementById("pair").play();
 			$(".s8").addClass("s8s3");
 			$(".s3").addClass("no");
 			$(".s2s,.s4s,.s5s").css("display","block");
@@ -581,6 +594,7 @@ function s3() {
 	
 	else if ($(".s3").hasClass("yes") && $(".s9").hasClass("yes")){
 		setTimeout(function(){
+			document.getElementById("pair").play();
 			$(".s9").addClass("s9s3");
 			$(".s2s,.s4s,.s5s").css("display","block");
 			$(".s3s").css("display","none");
@@ -590,6 +604,9 @@ function s3() {
 }
 
 function s4() {
+	document.getElementById("pick").play();
+	setTimeout(function(){show();}, 1200);  //time 1200 is set higher as "s6s4 etc and no" classes are added at 1000
+	//settimout is important to call the show function as it triggers "function s6()" again after other events are executed
 	$(".s4").addClass("yes");
 	$(".s3,.s2,.s5").removeClass("yes");
 	
@@ -599,6 +616,7 @@ function s4() {
 	
 	if ($(".s4").hasClass("yes") && $(".s6").hasClass("yes")){
 		setTimeout(function(){
+			document.getElementById("pair").play();
 			$(".s6").addClass("s6s4");
 			$(".s4").addClass("no");
 			$(".s2s,.s3s,.s5s").css("display","block");
@@ -609,6 +627,7 @@ function s4() {
 	
 	else if ($(".s4").hasClass("yes") && $(".s7").hasClass("yes")){
 		setTimeout(function(){
+			document.getElementById("pair").play();
 			$(".s7").addClass("s7s4");
 			$(".s4").addClass("no");
 			$(".s2s,.s3s,.s5s").css("display","block");
@@ -619,6 +638,7 @@ function s4() {
 	
 	else if ($(".s4").hasClass("yes") && $(".s8").hasClass("yes")){
 		setTimeout(function(){
+			document.getElementById("pair").play();
 			$(".s8").addClass("s8s4");
 			$(".s4").addClass("no");
 			$(".s2s,.s3s,.s5s").css("display","block");
@@ -629,6 +649,7 @@ function s4() {
 	
 	else if ($(".s4").hasClass("yes") && $(".s9").hasClass("yes")){
 		setTimeout(function(){
+			document.getElementById("pair").play();
 			$(".s9").addClass("s9s4");
 			$(".s4").addClass("no");
 			$(".s2s,.s3s,.s5s").css("display","block");
@@ -639,6 +660,9 @@ function s4() {
 }
 
 function s5() {
+	document.getElementById("pick").play();
+	setTimeout(function(){show();}, 1200);  //time 1200 is set higher as "s6s5 etc and no" classes are added at 1000
+	//settimout is important to call the show function as it triggers "function s6()" again after other events are executed
 	$(".s5").addClass("yes");
 	$(".s3,.s4,.s2").removeClass("yes");
 	
@@ -648,6 +672,7 @@ function s5() {
 	
 	if ($(".s5").hasClass("yes") && $(".s6").hasClass("yes")){
 		setTimeout(function(){
+			document.getElementById("pair").play();
 			$(".s6").addClass("s6s5");
 			$(".s5").addClass("no");
 			$(".s2s,.s4s,.s3s").css("display","block");
@@ -658,6 +683,7 @@ function s5() {
 	
 	else if ($(".s5").hasClass("yes") && $(".s7").hasClass("yes")){
 		setTimeout(function(){
+			document.getElementById("pair").play();
 			$(".s7").addClass("s7s5");
 			$(".s5").addClass("no");
 			$(".s2s,.s4s,.s3s").css("display","block");
@@ -668,6 +694,7 @@ function s5() {
 	
 	else if ($(".s5").hasClass("yes") && $(".s8").hasClass("yes")){
 		setTimeout(function(){
+			document.getElementById("pair").play();
 			$(".s8").addClass("s8s5");
 			$(".s5").addClass("no");
 			$(".s2s,.s4s,.s3s").css("display","block");
@@ -678,6 +705,7 @@ function s5() {
 	
 	else if ($(".s5").hasClass("yes") && $(".s9").hasClass("yes")){
 		setTimeout(function(){
+			document.getElementById("pair").play();
 			$(".s9").addClass("s9s5");
 			$(".s5").addClass("no");
 			$(".s2s,.s4s,.s3s").css("display","block");
@@ -688,6 +716,9 @@ function s5() {
 }
 
 function s6() {
+	document.getElementById("pick").play();
+	setTimeout(function(){show();}, 1200);  //time 1200 is set higher as "s6s2 etc and no" classes are added at 1000
+	//settimout is important to call the show function as it triggers "function s6()" again after other events are executed
 	$(".s6").addClass("yes");
 	$(".s7,.s8,.s9").removeClass("yes");
 	
@@ -697,6 +728,7 @@ function s6() {
 	
 	if ($(".s2").hasClass("yes") && $(".s6").hasClass("yes")){
 		setTimeout(function(){
+			document.getElementById("pair").play();
 			$(".s6").addClass("s6s2");
 			$(".s2").addClass("no");
 			$(".s3s,.s4s,.s5s").css("display","block");
@@ -707,6 +739,7 @@ function s6() {
 	
 	else if ($(".s3").hasClass("yes") && $(".s6").hasClass("yes")){
 		setTimeout(function(){
+			document.getElementById("pair").play();
 			$(".s6").addClass("s6s3");
 			$(".s3").addClass("no");
 			$(".s2s,.s4s,.s5s").css("display","block");
@@ -717,6 +750,7 @@ function s6() {
 	
 	else if ($(".s4").hasClass("yes") && $(".s6").hasClass("yes")){
 		setTimeout(function(){
+			document.getElementById("pair").play();
 			$(".s6").addClass("s6s4");
 			$(".s4").addClass("no");
 			$(".s3s,.s2s,.s5s").css("display","block");
@@ -727,6 +761,7 @@ function s6() {
 	
 	else if ($(".s5").hasClass("yes") && $(".s6").hasClass("yes")){
 		setTimeout(function(){
+			document.getElementById("pair").play();
 			$(".s6").addClass("s6s5");
 			$(".s5").addClass("no");
 			$(".s3s,.s4s,.s2s").css("display","block");
@@ -737,6 +772,9 @@ function s6() {
 }
 
 function s7() {
+	document.getElementById("pick").play();
+	setTimeout(function(){show();}, 1200);  //time 1200 is set higher as "s7s2 etc and no" classes are added at 1000
+	//settimout is important to call the show function as it triggers "function s6()" again after other events are executed
 	$(".s7").addClass("yes");
 	$(".s6,.s8,.s9").removeClass("yes");
 	
@@ -746,6 +784,7 @@ function s7() {
 	
 	if ($(".s2").hasClass("yes") && $(".s7").hasClass("yes")){
 		setTimeout(function(){
+			document.getElementById("pair").play();
 			$(".s7").addClass("s7s2");
 			$(".s2").addClass("no");
 			$(".s3s,.s4s,.s5s").css("display","block");
@@ -756,6 +795,7 @@ function s7() {
 	
 	else if ($(".s3").hasClass("yes") && $(".s7").hasClass("yes")){
 		setTimeout(function(){
+			document.getElementById("pair").play();
 			$(".s7").addClass("s7s3");
 			$(".s3").addClass("no");
 			$(".s2s,.s4s,.s5s").css("display","block");
@@ -766,6 +806,7 @@ function s7() {
 	
 	else if ($(".s4").hasClass("yes") && $(".s7").hasClass("yes")){
 		setTimeout(function(){
+			document.getElementById("pair").play();
 			$(".s7").addClass("s7s4");
 			$(".s4").addClass("no");
 			$(".s3s,.s2s,.s5s").css("display","block");
@@ -776,6 +817,7 @@ function s7() {
 	
 	else if ($(".s5").hasClass("yes") && $(".s7").hasClass("yes")){
 		setTimeout(function(){
+			document.getElementById("pair").play();
 			$(".s7").addClass("s7s5");
 			$(".s5").addClass("no");
 			$(".s3s,.s4s,.s2s").css("display","block");
@@ -786,6 +828,9 @@ function s7() {
 }
 
 function s8() {
+	document.getElementById("pick").play();
+	setTimeout(function(){show();}, 1200);  //time 1200 is set higher as "s8s2 etc and no" classes are added at 1000
+	//settimout is important to call the show function as it triggers "function s6()" again after other events are executed
 	$(".s8").addClass("yes");
 	$(".s6,.s7,.s9").removeClass("yes");
 	
@@ -795,6 +840,7 @@ function s8() {
 	
 	if ($(".s2").hasClass("yes") && $(".s8").hasClass("yes")){
 		setTimeout(function(){
+			document.getElementById("pair").play();
 			$(".s8").addClass("s8s2");
 			$(".s2").addClass("no");
 			$(".s3s,.s4s,.s5s").css("display","block");
@@ -805,6 +851,7 @@ function s8() {
 	
 	else if ($(".s3").hasClass("yes") && $(".s8").hasClass("yes")){
 		setTimeout(function(){
+			document.getElementById("pair").play();
 			$(".s8").addClass("s8s3");
 			$(".s3").addClass("no");
 			$(".s2s,.s4s,.s5s").css("display","block");
@@ -815,6 +862,7 @@ function s8() {
 	
 	else if ($(".s4").hasClass("yes") && $(".s8").hasClass("yes")){
 		setTimeout(function(){
+			document.getElementById("pair").play();
 			$(".s8").addClass("s8s4");
 			$(".s4").addClass("no");
 			$(".s3s,.s2s,.s5s").css("display","block");
@@ -825,6 +873,7 @@ function s8() {
 	
 	else if ($(".s5").hasClass("yes") && $(".s8").hasClass("yes")){
 		setTimeout(function(){
+			document.getElementById("pair").play();
 			$(".s8").addClass("s8s5");
 			$(".s5").addClass("no");
 			$(".s3s,.s4s,.s2s").css("display","block");
@@ -835,6 +884,9 @@ function s8() {
 }
 
 function s9() {
+	document.getElementById("pick").play();
+	setTimeout(function(){show();}, 1200);  //time 1200 is set higher as "s9s2 etc and no" classes are added at 1000
+	//settimout is important to call the show function as it triggers "function s6()" again after other events are executed
 	$(".s9").addClass("yes");
 	$(".s6,.s7,.s8").removeClass("yes");
 	
@@ -844,6 +896,7 @@ function s9() {
 	
 	if ($(".s2").hasClass("yes") && $(".s9").hasClass("yes")){
 		setTimeout(function(){
+			document.getElementById("pair").play();
 			$(".s9").addClass("s9s2");
 			$(".s2").addClass("no");
 			$(".s3s,.s4s,.s5s").css("display","block");
@@ -854,6 +907,7 @@ function s9() {
 	
 	else if ($(".s3").hasClass("yes") && $(".s9").hasClass("yes")){
 		setTimeout(function(){
+			document.getElementById("pair").play();
 			$(".s9").addClass("s9s3");
 			$(".s3").addClass("no");
 			$(".s2s,.s4s,.s5s").css("display","block");
@@ -864,6 +918,7 @@ function s9() {
 	
 	else if ($(".s4").hasClass("yes") && $(".s9").hasClass("yes")){
 		setTimeout(function(){
+			document.getElementById("pair").play();
 			$(".s9").addClass("s9s4");
 			$(".s4").addClass("no");
 			$(".s3s,.s2s,.s5s").css("display","block");
@@ -874,11 +929,40 @@ function s9() {
 	
 	else if ($(".s5").hasClass("yes") && $(".s9").hasClass("yes")){
 		setTimeout(function(){
+			document.getElementById("pair").play();
 			$(".s9").addClass("s9s5");
 			$(".s5").addClass("no");
 			$(".s3s,.s4s,.s2s").css("display","block");
 			$(".s5s").css("display","none");
 			$(".s5, .s9").removeClass("yes");
 		}, 1000);
+	}
+}
+
+
+
+function show() {
+	if (($(".s6").hasClass("s6s2") || $(".s6").hasClass("s6s3") || $(".s6").hasClass("s6s4") || $(".s6").hasClass("s6s5")) && ($(".s7").hasClass("s7s2") || $(".s7").hasClass("s7s3") || $(".s7").hasClass("s7s4") || $(".s7").hasClass("s7s5")) && ($(".s8").hasClass("s8s2") || $(".s8").hasClass("s8s3") || $(".s8").hasClass("s8s4") || $(".s8").hasClass("s8s5")) && ($(".s9").hasClass("s9s2") || $(".s9").hasClass("s9s3") || $(".s9").hasClass("s9s4") || $(".s9").hasClass("s9s5"))){
+		console.log("condition successful");
+		setTimeout(function(){
+			document.getElementById("success").play();
+			$(".s10,.s11").css("display","block");
+		}, 1000);
+		setTimeout(function(){
+			document.getElementById("match").play();
+			$(".s10,.s11").css("display","none");
+			$(".s6").removeClass("s6s3 s6s4 s6s5");
+			$(".s7").removeClass("s7s2 s7s4 s7s5");
+			$(".s8").removeClass("s8s2 s8s3 s8s5");
+			$(".s9").removeClass("s9s2 s9s3 s9s4");
+			$(".s6").animate({'top' : '52px','left' : '620px',},1000);
+			$(".s7").animate({'top' : '165px','left' : '620px',},1000);
+			$(".s8").animate({'top' : '278px','left' : '620px',},1000);
+			$(".s9").animate({'top' : '391px','left' : '620px',},1000);
+		}, 5000);	
+		setTimeout(function(){
+			$(".s12").css("display","block");
+			setTimeout(function(){document.getElementById("end").play();}, 1000)
+		}, 6500);
 	}
 }
